@@ -1,11 +1,14 @@
 $font-primary: 'Newsreader', serif;
 // $font-secondary: 'Source Sans Pro', sans-serif;
 
+$color-primary: #fff534;
+$color-secondary: #000000;
+
 // typography
 .text--h1 {
-  font-size: 64px;
+  font-size: 100px;
   line-height: 72px;
-  font-family: $font-primary;
+  font-family: 'Anton', sans-serif !important;
 
   @media #{map-get($display-breakpoints, 'sm-and-down')} {
     font-size: 40px;

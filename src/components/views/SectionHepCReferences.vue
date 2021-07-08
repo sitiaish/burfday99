@@ -19,7 +19,7 @@
 
 export default {
   name: 'Section',
-  coponents: {},
+  components: {},
   data() {
     return {
       publicPath: process.env.BASE_URL,
