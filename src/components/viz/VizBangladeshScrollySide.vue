@@ -4,50 +4,27 @@
       <v-col cols="12" md="4" class="scrolly__content">
 
         <div class="step first" data-step="1">
-          <div class="text-block">
-            <p class="text--body-1 font-weight-bold">Screened</p>
-            <p class="text--body-3">
-               Rates of hepatitis C infection are alarmingly high among the Rohingya refugee population. Prior to arriving at these camps, the Rohingya were already subject to poor healthcare and harsh living conditions due to violent discrimination in Myanmar.
-            </p>             
+          <div class="text-block">         
           </div>
         </div>
 
         <div class="step first" data-step="2">
-          <div class="text-block">
-            <p class="text--body-1 font-weight-bold">Diagnosed</p>
-            <p class="text--body-3">
-              Many Rohingya women experienced sexual violence while fleeing their homes, and continue to face gender-based violence in the camps. This puts them at extreme risk of contracting hepatitis C and passing them on to their children. It has been reported that eight percent of pregnant Rohingya women are infected with HCV in Cox’s Bazar. 
-            </p>
-            <p class="text--body-3">
-              Skin disease is also prevalent in the Rohingya population, which leaves those affected vulnerable to contracting HCV if their skin breaks, especially as they live in close quarters.
-            </p>              
+          <div class="text-block">           
           </div>
         </div>
 
         <div class="step first" data-step="3">
-          <div class="text-block">
-            <p class="text--body-1 font-weight-bold">Put on treatment</p>
-            <p class="text--body-3">
-              While Médecins Sans Frontières (MSF) operates a number of medical facilities in Cox’s Bazar, it is only able to treat a limited number of people from the large pool of infections in the camps and the surrounding Bangladeshi community. Some of these clinics also only restrict admission to patients who are co-infected with hepatitis C and a non-communicable disease, such as hypertension.  
-            </p>           
+          <div class="text-block">          
           </div>
         </div>
 
         <div class="step first" data-step="4">
-          <div class="text-block">
-            <p class="text--body-1 font-weight-bold">Completed treatment</p>
-            <p class="text--body-3">
-              Without legal and basic rights such as citizenship and healthcare, undomented migrants and refugees face the biggest obstacles in getting treated. The Rohingya make up a significant hidden population who experience tremendous suffering from hepatitis C in Bangladesh.  
-            </p>          
+          <div class="text-block">      
           </div>
         </div>
 
         <div class="step first" data-step="5">
-          <div class="text-block">
-            <p class="text--body-1 font-weight-bold">Cured</p>
-            <p class="text--body-3">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero perspiciatis consectetur ipsa fugit itaque minima ea repellat distinctio sint soluta nisi nihil illo, culpa minus quia maxime vitae! Doloremque, voluptate.
-            </p>            
+          <div class="text-block">          
           </div>
         </div>                                                 
       </v-col>

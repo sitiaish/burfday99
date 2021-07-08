@@ -3,7 +3,7 @@
     <v-container class="container--inner">
       <v-row justify="center" align="bottom" class="fill-height">  
         <v-col cols="12" md="8" class="text-center">
-          <h1 class="text--h1 font-weight-regular">Title of the Hepatitis C in Asia story</h1>       
+          <h1 class="text--h1 font-weight-regular">Title</h1>       
         </v-col>
       </v-row>
     </v-container>
