@@ -1,17 +1,16 @@
 <template>
   <section class="section_wrapper">
-    <VizBangladeshScrollySide/>
   </section>
 </template>
 
 <script>
 // import Map from '@/components/viz/Map'
-import VizBangladeshScrollySide from '@/components/viz/VizBangladeshScrollySide'
+// import VizBangladeshScrollySide from '@/components/viz/VizBangladeshScrollySide'
 
 export default {
   name: 'Section',
   components: {
-    VizBangladeshScrollySide,
+    // VizBangladeshScrollySide,
   },
   data() {
     return {

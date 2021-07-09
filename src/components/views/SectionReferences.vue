@@ -3,36 +3,16 @@
     <v-container class="container--inner">
       <v-row justify="center" align="end" class="fill-height">  
         <v-col cols="12" md="8" class="text-center">
-          <h1 id='title'><em>BROOKLYN<br/>NINE-NINE</em></h1> 
+          <p id='title'><em>BROOKLYN<br/>NINE-NINE</em></p> 
         </v-col>
       </v-row>
     </v-container>
 
-    <div class="menu my-6">
-      <div class="menu__item">
-        <div class="marquee">
-          <div class="marquee__inner">
-            <span
-              v-for="(n, i) in 6"
-              :key="i"
-              class="text--h4 font-tertiary"
-            >
-              <em>noice smort toit noice smort toit</em>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <v-container inner>
-      <v-row justify="center" align="end" class="fill-height">  
+      <v-row justify="center" align="end">  
         <v-col cols="12" md="6">
-          <p class="text--body-2">
-            Hi I'm Aishah, and I am guilty of rewatching Brooklyn 99 episodes during my lunch breaks. This dataviz project is a birthday collab project with greentfrapp. 
-          </p>
-
-          <p class="text--body-2">
-            SK scrapped B99 dialog from here. And we try to something per character based on the dialog data that we have. Also the lines were not tagged to the character that spoke it, so we were limited that way. Pretty cool cool cool cool birthday gift!  
+          <p class="text--body-2 font-tertiary text-center">
+            FREMULON! NOT A DOKTER! SHH. 
           </p> 
         </v-col>
       </v-row>
@@ -42,20 +22,13 @@
 
 <script>
 export default {
-  name: 'SectionLanding',
+  name: 'SectionReferences',
 }
 </script>
 
 <style lang="scss" scoped>
 .section_wrapper {
   background-color: #fff534;
-  min-height: 100vh;
-}
-
-#title {
-  font-family: 'Anton', sans-serif;
-  font-size: 100px;
-  font-style: 'italic';
 }
 
 .menu {
