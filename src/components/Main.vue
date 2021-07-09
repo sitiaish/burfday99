@@ -2,7 +2,7 @@
   <div>
     <SectionLanding />
     <Section1TerryLoves />
-    <!-- <SectionCoolCool /> -->
+    <SectionCoolCool />
     <SectionReferences />
   </div>
 </template>
@@ -10,7 +10,7 @@
 <script>
 import SectionLanding from '@/components/views/SectionLanding'
 import Section1TerryLoves from '@/components/views/Section1TerryLoves'
-// import SectionCoolCool from '@/components/views/SectionCoolCool'
+import SectionCoolCool from '@/components/views/SectionCoolCool'
 import SectionReferences from '@/components/views/SectionReferences';
 
 export default {
@@ -18,7 +18,7 @@ export default {
   components: {
     SectionLanding,
     Section1TerryLoves,
-    // SectionCoolCool,
+    SectionCoolCool,
     SectionReferences,
   },
   data: () => ({}),

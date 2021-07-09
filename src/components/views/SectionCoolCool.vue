@@ -1,16 +1,18 @@
 <template>
   <section class="section_wrapper">
+    <VizCoolCoolScrollyOverlay/>
   </section>
 </template>
 
 <script>
 // import Map from '@/components/viz/Map'
-// import VizBangladeshScrollySide from '@/components/viz/VizBangladeshScrollySide'
+import VizCoolCoolScrollyOverlay from '@/components/viz/VizCoolCoolScrollyOverlay'
 
 export default {
   name: 'Section',
+  mounted() {},
   components: {
-    // VizBangladeshScrollySide,
+    VizCoolCoolScrollyOverlay,
   },
   data() {
     return {
@@ -23,7 +25,7 @@ export default {
 
 <style lang="scss" scoped>
 .section_wrapper {
-  background-color: #F4F1EB;
+  background-color: #fff534;
   //height: calc(100vh - 64px);
 }
 
