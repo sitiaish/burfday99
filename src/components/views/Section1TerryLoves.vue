@@ -1,12 +1,12 @@
 <template>
   <section class="section_wrapper py-12">
     <v-container class="inner py-12">
-      <h3 class="text--h2 mb-16 scroll-prompt text-center">Everything that Terry has every loved/hated</h3>
+      <h3 class="text--h2 mb-16 scroll-prompt text-center">Everything that Terry has ever loved/hated</h3>
 
       <v-row align="center" justify="center" no-gutters class="py-6">
         <v-col cols="12" md="9" xl="10">
           <p class="text--body-1 mb-4">
-            Yeah, yeah, yeah. Everyone knows Terry loves yougurt. But here's other stuff that Terry loves - and hates - as well in case you forget!
+            Yeah, yeah, yeah. Everyone knows Terry loves yogurt. But here's other stuff that Terry loves - and hates - as well in case you forget!
           </p>
 
           <iframe width="560" height="315" class="my-8" src="https://www.youtube.com/embed/11JlyeigI30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>          
@@ -147,7 +147,7 @@ export default {
 
 <style lang="scss" scoped>
 .section_wrapper {
-  background-color: #F4F1EB;
+  background-color: #FFFFFF;
   //height: calc(100vh - 64px);
 }
 
