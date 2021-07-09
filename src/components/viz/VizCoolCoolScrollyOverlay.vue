@@ -4,10 +4,10 @@
       <v-col cols="12" class="casestudy-scrolly scrolly__sticky" >
         <svg id='coolcool-viz'></svg>
         <div id='cool-intro' class="text-block" >
-          <h3 class="text--h2 mb-16 scroll-prompt text-center">The times they said cool cool</h3>
+          <h3 class="text--h2 mb-16 scroll-prompt text-center">The times they said cool cool 😎</h3>
           <iframe style="margin-left: auto; margin-right: auto; display: block;" width="560" height="315" class="my-8" src="https://www.youtube.com/embed/zDcbpFimUc8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <p class="text--body-3">
-            Is it a real compliment? A coping mechanism? Something to fill the silence? Whatever it is, the cool-chain has become part of what we love about the Nine-Nine.
+            Is it a real compliment? A coping mechanism? Something to fill the silence? Whatever it is, the cool-chain has become part of what we love about the Nine-Nine. No doubt, no doubt.
           </p>
         </div>
       </v-col>
@@ -17,7 +17,7 @@
           <div class="text-block">
             <p class="text--body-1 font-weight-bold">The first ever "Cool, cool."</p>
             <p class="text--body-3">
-              Well, well, well. Turns out the first ever "Cool, cool." was said by Boyle during his attempt to retrieve the tape in the department video camera from Hitchcock. This was more of a slow serious "cool, cool" meant to mask Boyle's frantic attempt to conceal evidence of Boyle and Gina's sexcapade.
+              Well, well, well. Turns out the first ever "Cool, cool." was said by Boyle during his attempt to retrieve the tape in the department video camera from Hitchcock (S2E03 - The Jimmy Jab Games). This was more of a slow serious "cool, cool" meant to mask Boyle's frantic attempt to conceal evidence of Boyle and Gina's sexcapade.
             </p>
             <img class="cool-img" src="02x03_coolcool.png" />
           </div>
@@ -27,7 +27,7 @@
           <div class="text-block">
             <p class="text--body-1 font-weight-bold">No hospital!</p>
             <p class="text--body-3">
-              Jake rattles off three "cool"s in sweet succession as he calmly handles Sharon's childbirth and proceeds to summon her vaginal Gandalf aka doula, which is a thing that he definitely know what it is.
+              Jake rattles off three "cool"s in sweet succession as he calmly handles Sharon's childbirth and proceeds to summon her vaginal Gandalf aka doula, which is a thing that he definitely know what it is (S3E08 - Ava).
             </p>
             <img class="cool-img" src="03x08_coolcoolcool.png" />             
           </div>
@@ -37,7 +37,7 @@
           <div class="text-block">
             <p class="text--body-1 font-weight-bold">Who's Brett Booth?</p>
             <p class="text--body-3">
-              In response to the name of Det. Brett Booth, Jake nonchalently utters, "Cool, cool, cool." But best-bud-Boyle notices that (UH-OH!) that was Jake's worried "cool, cool, cool."
+              In response to the name of Det. Brett Booth, Jake nonchalently utters, "Cool, cool, cool." But best-bud-Boyle notices that (UH-OH!) that was Jake's worried "cool, cool, cool." (S5E20 - Show Me Going)
             </p>
             <img class="cool-img" src="05x20_coolcoolcool.png" />  
           </div>
@@ -45,15 +45,30 @@
 
         <div class="step" data-step="4">
           <div class="text-block">
-            <p class="text--body-1 font-weight-bold">Cured</p>
+            <p class="text--body-1 font-weight-bold">Something about 6 cools</p>
             <p class="text--body-3">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero perspiciatis consectetur ipsa fugit itaque minima ea repellat distinctio sint soluta nisi nihil illo, culpa minus quia maxime vitae! Doloremque, voluptate.
             </p>
+          </div>
+        </div>
+
+        <div class="step" data-step="5">
+          <div class="text-block">
+            <p class="text--body-1 font-weight-bold">Something about 10 cools</p>
             <p class="text--body-3">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero perspiciatis consectetur ipsa fugit itaque minima ea repellat distinctio sint soluta nisi nihil illo, culpa minus quia maxime vitae! Doloremque, voluptate.
-            </p>              
+            </p>
           </div>
-        </div>                                       
+        </div>
+
+        <div class="step" data-step="6">
+          <div class="text-block">
+            <p class="text--body-1 font-weight-bold">Something about many many cools</p>
+            <p class="text--body-3">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero perspiciatis consectetur ipsa fugit itaque minima ea repellat distinctio sint soluta nisi nihil illo, culpa minus quia maxime vitae! Doloremque, voluptate.
+            </p>
+          </div>
+        </div>
       </v-col>     
     </v-row>
   </v-container> 
@@ -69,7 +84,7 @@ export default {
   data() {
     return {
       publicPath: process.env.BASE_URL,
-      coolSegments: [1, 1, 2, 4, 4, 4, 4, 4, 5, 6]
+      coolSegments: [1, 1, 2, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 6]
     };
   },
   mounted() {
@@ -82,7 +97,7 @@ export default {
         .attr('height', 150)
         .attr('width', window.innerWidth)
         .selectAll('text')
-        .data(d3.range(10)).enter()
+        .data(d3.range(15)).enter()
         .append('text')
         .text('cool')
         .attr('class', d => 'cool-' + this.coolSegments[d])
@@ -95,7 +110,7 @@ export default {
       // instantiate scrollama
       const scrollerDesktop = scrollama();
 
-      const stepH = Math.floor(window.innerHeight * 0.7);
+      const stepH = Math.floor(window.innerHeight * 0.5);
       d3.selectAll('.step').style("height", stepH + "px");
       // d3.selectAll('.step.first').style("height", null)
 

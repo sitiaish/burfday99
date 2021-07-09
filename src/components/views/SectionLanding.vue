@@ -13,9 +13,10 @@
         <div class="marquee">
           <div class="marquee__inner">
             <span
-              v-for="(n, i) in 6"
+              v-for="(n, i) in 10"
               :key="i"
               class="text--h4 font-tertiary"
+              style="padding-left: 0; padding-right: 5px;"
             >
               <em>noice smort toit noice smort toit</em>
             </span>
@@ -86,7 +87,8 @@ export default {
   &:hover,
   &:active {
     span {
-      color: white;
+      color: #fff534;
+      background-color: #000000;
     }
   }
 }
