@@ -152,10 +152,18 @@ export default {
     //   console.log(element)
     // },
     handleStepProgress(response) {
-      let p = Math.min(response.progress, 0.6)
-      p /= 0.6
-      d3.selectAll('text.cool-' + (response.index + 1))
-        .attr('x', d => 2000 - 2000 * p + d * 120)
+      let p
+      if (response.index < 5) {
+        p = Math.min(response.progress, 0.6)
+        p /= 0.6
+        d3.selectAll('text.cool-' + (response.index + 1))
+          .attr('x', d => 2000 - 2000 * p + d * 120)
+      } else {
+        p = Math.min(response.progress, 0.2)
+        p /= 0.2
+        d3.selectAll('text.cool-' + (response.index + 1))
+          .attr('x', d => 2000 - 2000 * p + d * 120)
+      }
       if (response.index == 0) {
         d3.select('div#cool-intro')
           .style('opacity', 1 - p)
