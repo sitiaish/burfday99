@@ -131,13 +131,13 @@ export default {
         .attr('fill', '#fff534')
         .attr('stroke', '#000000')
       if (d.count > 1) {
-        this.caption = `${d.episode.replace('&amp;', '&')} has ${d.count} "cool"s.`
+        this.caption = `${d.episode} has ${d.count} "cool"s.`
       } else if (d.count == 1) {
-        this.caption = `${d.episode.replace('&amp;', '&')} has ${d.count} "cool".`
+        this.caption = `${d.episode} has ${d.count} "cool".`
       } else if (d.count == 0) {
-        this.caption = `${d.episode.replace('&amp;', '&')} has ${d.count} "cool"s. Booooo.`
+        this.caption = `${d.episode} has ${d.count} "cool"s. Booooo.`
       } else {
-        this.caption = `${d.episode.replace('&amp;', '&')} has too many "cool"s to count. 😎`
+        this.caption = `${d.episode} has too many "cool"s to count. 😎`
       }
     },
     handleMouseOut(target, d) {
