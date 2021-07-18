@@ -33,15 +33,20 @@
     </div>
 
     <VizWuntchHolt />
+
+    <VizWuntchHoltInsults />
   </section>
 </template>
 
 <script>
 import VizWuntchHolt from '@/components/viz/VizWuntchHolt'
+import VizWuntchHoltInsults from '@/components/viz/VizWuntchHoltInsults'
+
 export default {
   name: 'Section',
   components: {
     VizWuntchHolt,
+    VizWuntchHoltInsults
   },
   data() {
     return {
