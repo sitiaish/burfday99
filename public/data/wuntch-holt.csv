@@ -12,7 +12,8 @@ id,season,episode,who,line,type,length
 3,02,03,Wuntch,"Hmm, an embarrassing blight growing right under your nose.",,9
 3,02,03,Wuntch,Not unlike that moustache you had when we first met.,insult,10
 3,02,03,Holt,That moustache was era-appropriate.,,4
-4,02,05,Jake,"I would give you more details, but someone just came in to try and find her dalmatian coat.",,18
+4,02,05,Jake,"Fantastic, he loved me.",,
+4,02,05,Jake,"I would give you more details, but someone just came in to try and find her dalmatian coat.",insult,18
 4,02,05,Wuntch,"Hello, Raymond.",,2
 4,02,05,Holt,Madeline.,,1
 4,02,05,Holt,I wondered why all the birds had suddenly stopped singing.,insult,10
