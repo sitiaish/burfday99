@@ -1,9 +1,9 @@
 <template>
   <section class="section_wrapper py-12">
-          <div class="text-block" style="text-align: center;">
+          <div class="text-block" style="text-align: center; background: #fff534;">
             <h2>And a quick look at all the cools in every season!</h2>
-          <svg id="cool-chart" />
-          <p style='height: 25px;'>{{ caption }}</p>
+          <svg id="cool-chart" preserveAspectRatio="xMinYMid"/>
+          <h3 style='height: 25px;'>{{ caption }}</h3>
           </div>
   </section>
 </template>
@@ -114,15 +114,17 @@ export default {
         .attr('x', d => d3.range(d).map(e => this.getNumEpisodes(e+1)).reduce((a, b) => a + b, 0) * (this.colWidth + 1) + 1)
         .attr('y', 400 + 25)
         .text(d => 'Season ' + (d + 1))
+      d3.select('svg#cool-chart')
+        .call(this.responsivefy)
     },
     getNumEpisodes(season) {
-      return this.data.filter(d => parseInt(d.episode.substr(0, 2)) == season).length
+      return this.data.filter(d => parseInt(d.episode.substr(1, 3)) == season).length
     },
     getFill(d) {
       if (d.count >= 0) {
-        return this.colors[parseInt(d.episode.substr(0, 2)) - 1]
+        return this.colors[parseInt(d.episode.substr(1, 3)) - 1]
       } else {
-        return 'url(#Gradient' + (parseInt(d.episode.substr(0, 2)) - 1) + ')'
+        return 'url(#Gradient' + (parseInt(d.episode.substr(1, 3)) - 1) + ')'
       }
     },
     handleMouseMove(target, d) {
@@ -143,10 +145,31 @@ export default {
     handleMouseOut(target, d) {
       let i = this.hoverBars.nodes().indexOf(target.target)
       d3.select(this.bars.nodes()[i])
-        .attr('fill', d.count >= 0 ? '#000000' : 'url(#Gradient' + (parseInt(d.episode.substr(0, 2)) - 1) + ')')
+        .attr('fill', d.count >= 0 ? '#000000' : 'url(#Gradient' + (parseInt(d.episode.substr(1, 3)) - 1) + ')')
         .attr('stroke', '')
       this.caption = ''
-    }
+    },    
+    responsivefy(svg) {
+      const width = parseInt(svg.style('width'), 10);
+      const height = parseInt(svg.style('height'), 10);
+      const aspect = width / height;
+
+      svg
+        .attr('viewBox', `0 0 ${width} ${height}`)
+        .attr('preserveAspectRatio', 'xMinYMid')
+        .call(this.resize, aspect);
+
+      d3.select(window).on('resize.test', () => {
+        this.resize(svg, aspect);
+      });
+    },
+    resize(svg, aspect) {
+      const container = d3.select(svg.node().parentNode);
+      const w = Math.min(parseInt(container.style('width'), 10), 1000);
+
+      svg.attr('width', w);
+      svg.attr('height', Math.round(w / aspect));
+    },
   },
 }
 </script>

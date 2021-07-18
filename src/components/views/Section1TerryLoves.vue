@@ -97,7 +97,7 @@
         <v-col cols="12" md="12">
           <div class="pt-12">
             <p class="text--body-1">            
-              Of course, searching by string like we did couldn't possbly cover all the things Terry loves and hate. I caught that when <em>"Terry loves yogurt"</em> strings only came up three times across the B99 files. And we know, <em>for a fact</em> that Terry loves his yogurt. So what gives? 
+              Of course, searching by string like we did couldn't possibly cover all the things Terry loves and hate. I caught that when <em>"Terry loves yogurt"</em> strings only came up three times across the B99 files. And we know, <em>for a fact</em> that Terry loves his yogurt. So what gives? 
             </p>
 
             <p class="text--body-1">            

@@ -1,5 +1,5 @@
 <template>
-  <v-container outer class="scrolly-overlay">
+  <v-container class="scrolly-overlay">
     <v-row justify="space-between" align="start">  
       <v-col cols="12" class="casestudy-scrolly scrolly__sticky" >
         <svg id='coolcool-viz'></svg>
@@ -185,6 +185,10 @@ export default {
 
 <style lang="scss" scoped>
 
+.scrolly-overlay {
+  max-width: 100%;
+}
+
 img.cool-img {
   width: 300px;
   display: block;
@@ -210,19 +214,14 @@ img.cool-img {
   background-color: white;
   color: #2E2E2E;
   padding: 36px;
+  width: 50%;
+  min-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .casestudy-scrolly {
   z-index: 1000; 
-}
-
-.dot-bangladesh-scrolly {
-  height: 15px;
-  width: 15px;
-  border-radius: 50%;
-  display: inline-block;
-  background-color: #425D70;
-  margin-right: 10px;
 }
 
 .scrolly__overlay {
