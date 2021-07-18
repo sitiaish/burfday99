@@ -56,7 +56,7 @@
           <div class="terry-card text-left">
             <p class="text--body-2">Click on the emoji to see what Terry had loved/hated on B99!</p>          
               <div class="details pa-4">
-                <h3 class="text--h2 text--header mb-12">{{ selectedItem.emotion === 'loves' ?  '❤️' : '💔' }} {{ selectedItem.thing }}</h3>
+                <h3 class="text--h2 text--header mb-12">{{ ['loves', 'likes', 'loved'].some(d => selectedItem.emotion === d) ?  '❤️' : '💔' }} {{ selectedItem.thing }}</h3>
                 <p class="mb-3 text--body-1">
                   <span class="text-subtitle">Episode: </span>{{ selectedItem.episode }}
                 </p>
