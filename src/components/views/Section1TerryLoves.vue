@@ -2,7 +2,7 @@
   <section class="section_wrapper py-12">
     <v-container class="py-12">
       <v-row align="start" justify="center" class="py-6">
-        <v-col cols="12" md="4" xl="10">
+        <v-col cols="12" md="4">
           <div
             data-aos="slide-right"
             data-aos-ease = "ease"
@@ -11,7 +11,7 @@
             <img src="@/assets/terry-yogurt.png" width="100%" />
           </div>
         </v-col>
-        <v-col cols="8">
+        <v-col cols="12" md="8">
           <div>
           <h3 class="text--h1 text--header mb-2 mr-4">TERRY LOVES</h3>
           </div>
@@ -37,7 +37,7 @@
             </p>
 
             <p class="text--body-1">            
-              If love wasn't enough, we found stuff that Terry Jeffords hated. Special to bugs because Terry, despite his bulky frame and all those 👅 muscles, is just a mere mortal like us. Hand me that Baygon!
+              If love wasn't enough, we found stuff that Terry Jeffords hated. Special mention to bugs because Terry, despite his bulky frame and all those 👅 muscles, is just a mere mortal like us. Hand me that Baygon!
             </p>
           </div>
         </v-col>        
@@ -71,25 +71,7 @@
               </div>                  
           </div>
         </v-col>        
-      </v-row>      
-      <!-- <div class="love-wrapper pa-4">
-        <div class="text-center">
-          <v-row align="start" justify="center" style="height: 120px;" no-gutters>
-            <v-col cols="4">
-              <h3 class="text--header mb-12">TERRY ❤️</h3>
-            </v-col>
-            <v-col cols="6">
-              <p class="text--h2 text--header">
-              <span id="loves">love</span>
-              </p>
-            </v-col>
-          </v-row>
-        </div>  
-
-        <div v-for="(n, i) in items" :key="i" class="mr-8 pb-12 terry-emoji">
-          {{ n.emoji }}
-        </div>
-      </div>         -->
+      </v-row>
     </v-container>
 
     <v-container class="inner py-12">
@@ -112,7 +94,7 @@
       <div class="sticky" id="refd">
         <div class="horizontal-container" id="horizontal" :style="{transform: `translateX(${translate}px)`}">
           <div class="card-container">
-            <div class="sample-card">
+            <div class="sample-card pa-6 pa-xl-8">
               <img src="@/assets/yogurt-1.png" width="100%" />
               <div class="my-8">
                 <p class="text--h3 font-tertiary">
@@ -123,7 +105,7 @@
                 </p>
               </div>            
             </div>
-            <div class="sample-card">
+            <div class="sample-card pa-6 pa-xl-8">
               <div class="mb-8">
                 <p class="text--h3 font-tertiary">
                   S1E014 <em>The Ebony Falcon</em>
@@ -134,7 +116,7 @@
               </div>                
               <img src="@/assets/yogurt-2.png" width="100%" />                        
             </div>
-            <div class="sample-card">
+            <div class="sample-card pa-6 pa-xl-8">
               <img src="@/assets/yogurt-password.png" width="100%" />
               <div class="my-8">
                 <p class="text--h3 font-tertiary">
@@ -145,7 +127,7 @@
                 </p>
               </div>                             
             </div>
-            <div class="sample-card">
+            <div class="sample-card pa-6 pa-xl-8">
               <div class="mb-8">
                 <p class="text--h3 font-tertiary">
                   S3E02 <em>The Funeral</em>
@@ -156,7 +138,7 @@
               </div>                    
               <img src="@/assets/yogurt-password-2.png" width="100%" />             
             </div>     
-            <div class="sample-card">              
+            <div class="sample-card pa-6 pa-xl-8">
               <img src="@/assets/yogurt-password-2.png" width="100%" />
               <div class="my-8">
                 <p class="text--h3 font-tertiary">
@@ -400,6 +382,5 @@ div .v-input >>> .v-input__slot{
   background-color: yellow;
   margin-right: 75px;
   flex-shrink: 0;
-  padding: 24px;
 }
 </style>
