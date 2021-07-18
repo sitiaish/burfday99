@@ -6,7 +6,7 @@
       <v-row align="center" justify="center" no-gutters class="py-6">
         <v-col cols="12" xl="10">
           <p class="text--body-1 mb-4">
-            <em>Title of your s*x tape</em>. As Boyle said it, "Oh, that's just something we say back at the Nine-Nine." Another running gag is the highly inappropriate titling of people's sex tapes, moslty done by Jake to Amy throughout the seasons. 
+            <em>Title of your sex tape</em>. As Boyle said it, "Oh, that's just something we say back at the Nine-Nine." Another running gag is the highly inappropriate titling of people's sex tapes, moslty done by Jake to Amy throughout the seasons. 
           </p>
 
           img comic 
