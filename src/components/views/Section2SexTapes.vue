@@ -4,10 +4,12 @@
       <h3 class="text--h2 mb-16 scroll-prompt text-center">Titles of (mostly) Amy's Sex Tapes</h3>
 
       <v-row align="center" justify="center" no-gutters class="py-6">
-        <v-col cols="12" md="9" xl="10">
+        <v-col cols="12" xl="10">
           <p class="text--body-1 mb-4">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero, assumenda? Tempore possimus ipsum iusto atque sapiente quas error cum accusantium, nostrum placeat obcaecati magni delectus voluptatem quia! Reprehenderit, molestiae molestias.
+            <em>Title of your s*x tape</em>. As Boyle said it, "Oh, that's just something we say back at the Nine-Nine." Another running gag is the highly inappropriate titling of people's sex tapes, moslty done by Jake to Amy throughout the seasons. 
           </p>
+
+          img comic 
 
           <iframe width="560" height="315" class="my-8" src="https://www.youtube.com/embed/idQR0oARcIY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>         
         </v-col>
@@ -15,6 +17,27 @@
     </v-container>
 
     <VizSexTape />
+<!-- 
+    <div class="marquee">
+      <ul class="marquee-content">
+        <li class="marquee-item"><img class="marquee-image" src="https://picsum.photos/200/300?random=1" alt="animal1"></li>
+        <li class="marquee-item"><img class="marquee-image" src="https://picsum.photos/200/300?random=2" alt="animal2"></li>
+        <li class="marquee-item"><img class="marquee-image" src="https://picsum.photos/200/300?random=3" alt="animal3"></li>
+        <li class="marquee-item"><img class="marquee-image" src="https://picsum.photos/200/300?random=4" alt="animal4"></li>
+        <li class="marquee-item"><img class="marquee-image" src="https://picsum.photos/200/300?random=5" alt="animal5"></li>
+
+        <li class="marquee-item"><img class="marquee-image" src="https://picsum.photos/200/300?random=6" alt="animal1"></li>
+        <li class="marquee-item"><img class="marquee-image" src="https://picsum.photos/200/300?random=7" alt="animal2"></li>
+        <li class="marquee-item"><img class="marquee-image" src="https://picsum.photos/200/300?random=8" alt="animal3"></li>
+        <li class="marquee-item"><img class="marquee-image" src="https://picsum.photos/200/300?random=10" alt="animal4"></li>
+
+        <li class="marquee-item"><img class="marquee-image" src="https://picsum.photos/200/300?random=6" alt="animal1"></li>
+        <li class="marquee-item"><img class="marquee-image" src="https://picsum.photos/200/300?random=7" alt="animal2"></li>
+        <li class="marquee-item"><img class="marquee-image" src="https://picsum.photos/200/300?random=8" alt="animal3"></li>
+        <li class="marquee-item"><img class="marquee-image" src="https://picsum.photos/200/300?random=10" alt="animal4"></li>   
+             
+      </ul>
+    </div>     -->
   </section>
 </template>
 
@@ -127,5 +150,35 @@ div .v-input >>> .v-input__slot{
   // color: #2e2e2e;  
   letter-spacing: 2px;
   text-transform: uppercase;  
+}
+
+
+.marquee {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+.marquee-content {
+    display: flex;
+    list-style: none;
+    animation: scrolling 10s linear infinite;
+}
+
+.marquee-item {
+    height: 150px;
+    width: 200px;
+    flex-shrink: 0;
+    margin: 0 50px;
+}
+
+.marquee-image {
+    height: 100%;
+    width: 100%;
+}
+
+@keyframes scrolling {
+    0% { transform: translateX(0); }
+    100% { transform: translatex(-100%); }
 }
 </style>

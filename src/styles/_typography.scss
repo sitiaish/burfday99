@@ -12,7 +12,7 @@ $color-secondary: #000000;
 // typography
 .text--header {
   font-size: 72px;
-  line-height: 86px;
+  line-height: 94px;
   font-family: 'Anton', sans-serif !important;
 
   @media #{map-get($display-breakpoints, 'sm-and-down')} {
@@ -23,7 +23,7 @@ $color-secondary: #000000;
 
 .text--h1 {
   font-size: 75px;
-  line-height: 64px;
+  line-height: 96px;
   font-family: $font-primary;
 
   @media #{map-get($display-breakpoints, 'sm-and-down')} {
@@ -81,7 +81,7 @@ $color-secondary: #000000;
   font-size: 18px;
   font-weight: 400;
   line-height: 28px;
-  color: #2e2e2e;
+  // color: #2e2e2e;
   // font-family: $font-secondary;
 
   @media #{map-get($display-breakpoints, 'sm-and-down')} {

@@ -1,30 +1,50 @@
 <template>
   <section class="section_wrapper py-12">
-    <v-container class="inner py-12">
-      <h3 class="text--h2 mb-16 scroll-prompt text-center">Everything that Terry has ever loved/hated</h3>
-
-      <v-row align="center" justify="center" no-gutters class="py-6">
-        <v-col cols="12" md="9" xl="10">
-          <p class="text--body-1 mb-4">
-            Yeah, yeah, yeah. Everyone knows Terry loves yogurt. But here's other stuff that Terry loves - and hates - as well in case you forget!
-          </p>
-
-          <iframe width="560" height="315" class="my-8" src="https://www.youtube.com/embed/11JlyeigI30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>          
+    <v-container class="py-12">
+      <v-row align="start" justify="center" class="py-6">
+        <v-col cols="12" md="4" xl="10">
+          <div
+            data-aos="slide-right"
+            data-aos-ease = "ease"
+            data-aos-duration="1000"
+            data-aos-delay="100">
+            <img src="@/assets/terry-yogurt.png" width="100%" />
+          </div>
         </v-col>
-      </v-row>
-    </v-container>
-                
-    <v-container> 
-      <v-row align="start" justify="center" no-gutters>
-        <v-col cols="3" offset="2">
-          <h3 class="text--h2 text--header mb-12 text-right mr-4">TERRY LOVES</h3>
-        </v-col>
-        <v-col cols="6">
-          <p class="text--h2 text-left">
+        <v-col cols="8">
+          <div>
+          <h3 class="text--h1 text--header mb-2 mr-4">TERRY LOVES</h3>
+          </div>
+          <div style="height: 140px;">
+          <p class="text--h1 text-left">
           <span id="loves">love</span>
           </p>
-        </v-col>
-      </v-row>           
+          </div>
+        </v-col>             
+      </v-row>
+    </v-container>
+
+    <v-container class="inner py-12">
+      <v-row justify="center">
+        <v-col cols="12" md="12">
+          <h3 class="text--h2 mb-16 scroll-prompt text-center">
+            Everything that Terry has ever loved/hated
+          </h3>
+
+          <div class="pt-12">
+            <p class="text--body-1">            
+              The running gag with Terry is that he refers to himself in the third person -- "You made Terry get real with himself and his genitals. [02x2 Chocolate Milk]". And that he loves yogurt. I wanted to see what else Terry loves besides yogurt. We went ahead to find instances in B99 with "Terry love". We expanded this to include "Terry like". 
+            </p>
+
+            <p class="text--body-1">            
+              If love wasn't enough, we found stuff that Terry Jeffords hated. Special to bugs because Terry, despite his bulky frame and all those 👅 muscles, is just a mere mortal like us. Hand me that Baygon!
+            </p>
+          </div>
+        </v-col>        
+      </v-row>
+    </v-container>    
+                
+    <v-container>     
       <v-row align="start" justify="space-between" no-gutters class="py-6">
         <v-col cols="12" md="6">
           <div v-for="(n, i) in items" :key="i" class="mr-8 pb-12 terry-emoji" @click="handleInteractivity(n, $event)">
@@ -71,6 +91,88 @@
         </div>
       </div>         -->
     </v-container>
+
+    <v-container class="inner py-12">
+      <v-row justify="center">
+        <v-col cols="12" md="12">
+          <div class="pt-12">
+            <p class="text--body-1">            
+              Of course, searching by string like we did couldn't possbly cover all the things Terry loves and hate. I caught that when <em>"Terry loves yogurt"</em> strings only came up three times across the B99 files. And we know, <em>for a fact</em> that Terry loves his yogurt. So what gives? 
+            </p>
+
+            <p class="text--body-1">            
+              I guess it's more of how important yogurt is to Terrence that makes us remmember Terry loves yogurt and maybe less so of the number of times the line is spoken. Like even Captain Holt knows Terry loves his yogurt when the gag first started in Season 1 Episode 2, The Tagger. 
+            </p>
+          </div>
+        </v-col>        
+      </v-row>
+    </v-container>    
+
+    <div class="tall-container" id="tall">
+      <div class="sticky" id="refd">
+        <div class="horizontal-container" id="horizontal" :style="{transform: `translateX(${translate}px)`}">
+          <div class="card-container">
+            <div class="sample-card">
+              <img src="@/assets/yogurt-1.png" width="100%" />
+              <div class="my-8">
+                <p class="text--h3 font-tertiary">
+                  S1E02 <em>The Tagger</em>
+                </p>
+                <p class="text--body-2">
+                  First mention of "Terry loves yogurt" when a police report was fished from Terry's trash with stains of yogurt.
+                </p>
+              </div>            
+            </div>
+            <div class="sample-card">
+              <div class="mb-8">
+                <p class="text--h3 font-tertiary">
+                  S1E014 <em>The Ebony Falcon</em>
+                </p>
+                <p class="text--body-2">
+                  A personal favourite! Terry describes himself as <em> the ebony falcon</em>: monogamous and too tired for sex, so his only indulgence is fresh fruit yogurt parfaits. Jake echoes with "Terry loves yogurt".
+                </p>
+              </div>                
+              <img src="@/assets/yogurt-2.png" width="100%" />                        
+            </div>
+            <div class="sample-card">
+              <img src="@/assets/yogurt-password.png" width="100%" />
+              <div class="my-8">
+                <p class="text--h3 font-tertiary">
+                  S2E013 <em>Payback</em>
+                </p>
+                <p class="text--body-2">
+                  The team tries to hack into Terry's email, only to be stumped by password. Surprise, surprise -- the password, as guessed by Boyle, is "yogurt".
+                </p>
+              </div>                             
+            </div>
+            <div class="sample-card">
+              <div class="mb-8">
+                <p class="text--h3 font-tertiary">
+                  S3E02 <em>The Funeral</em>
+                </p>
+                <p class="text--body-2">
+                  Did you hear? Terry's favourite mango yogurt got discontinued! I love how he ranks this together with Sharon's bedrest and his kids thinking their preschool teacher a "stupidface". Yep they all stink Terry.
+                </p>
+              </div>                    
+              <img src="@/assets/yogurt-password-2.png" width="100%" />             
+            </div>     
+            <div class="sample-card">              
+              <img src="@/assets/yogurt-password-2.png" width="100%" />
+              <div class="my-8">
+                <p class="text--h3 font-tertiary">
+                  S4E02 <em>Coral Palms Pt.2</em>
+                </p>
+                <p class="text--body-2">
+                  "Enjoy your blood yogurt" Terry caves under the chill-dude Captain Stentley and got a personal yogurt fridge at his desk. Which he eventually returns to save Jake and Holt at Coral Palms.
+                </p>
+              </div>                    
+            </div>                                                         
+          </div>
+        </div>
+      </div>
+    </div>    
+
+   
   </section>
 </template>
 
@@ -91,7 +193,8 @@ export default {
         emoji: '',
         emotion: '',
         thing: ''
-      }
+      },
+      translate: 0,
     };
   },
   async mounted() {
@@ -101,7 +204,10 @@ export default {
 
     this.$nextTick(() => {
       d3.select('div.terry-emoji').classed('selectedEmoji', true);
-    })
+    });
+
+    this.calcDynamicHeight();
+    this.addScrollOffset();    
   },
   methods: {
     parseData(data) {
@@ -133,14 +239,27 @@ export default {
             break
           }
         }
-      }, 750)      
+      }, 600)      
     },
     handleInteractivity(n, $event) {
       d3.selectAll('div.terry-emoji').classed('selectedEmoji', false);
       const emoji = $event.target; 
       d3.select(emoji).classed('selectedEmoji', true);
       this.selectedItem = n;
-    }
+    },
+    calcDynamicHeight() {
+      const vw = window.innerWidth;
+      const vh = window.innerHeight;   
+      const objectWidth = document.getElementById('horizontal').scrollWidth
+      document.getElementById("tall").style.height = objectWidth - vw + vh  + 'px';
+    },
+    addScrollOffset() {
+      window.addEventListener("scroll", () => {
+        const offsetTop = document.getElementById("refd").offsetTop;
+        const offsetParent = document.getElementById("tall").offsetTop; 
+        this.translate = (offsetParent - offsetTop);
+      });      
+    }    
   }
 }
 </script>
@@ -177,6 +296,7 @@ div .v-input >>> .v-input__slot{
   border-bottom: 4px solid black;
   text-decoration: none;
   word-break: break-word;
+  background-color: #fff534 !important;
 }
 
 .terry-emoji {
@@ -239,5 +359,47 @@ div .v-input >>> .v-input__slot{
   // color: #2e2e2e;  
   letter-spacing: 2px;
   text-transform: uppercase;  
+}
+
+// .tall-container {
+//   // border: 5px solid orange;
+// }
+
+.sticky {
+  position: sticky;
+  top: 64px;
+  height: calc(100vh - 80px);
+  width: 100%;
+  overflow-x: hidden;
+  // background-color: pink;
+}
+
+.horizontal-container {
+  position: absolute;
+  height: 100%;
+  will-change: transform;
+  // border: 2px solid purple;
+}
+
+.card-container {
+  position: relative;
+  height: 100%;
+  margin: 0 0 0 120px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  // border: 10px solid black;
+  // background-color: grey;
+}
+
+.sample-card {
+  position: relative;
+  height: 80%;
+  width: 500px;
+  background-color: yellow;
+  margin-right: 75px;
+  flex-shrink: 0;
+  padding: 24px;
 }
 </style>

@@ -184,9 +184,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-svg#coolcool-viz {
-  //border: 1px solid red;
-}
 
 img.cool-img {
   width: 300px;
@@ -246,9 +243,9 @@ img.cool-img {
   align-items: center;    
 }
 
-.step:first-child {
-  //margin-top: calc(25vh);
-}
+// .step:first-child {
+//   //margin-top: calc(25vh);
+// }
 
 .scrolly__sticky {
   justify-content: center;  

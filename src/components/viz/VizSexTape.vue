@@ -1,35 +1,24 @@
 <template>
-<v-container inner>
+<v-container>
   <div class="my-5">
-    <p class="text--body-1 text-center">What's the title of 
+    <p class="text--h4 font-tertiary text-center">What are the titles of 
       <v-select 
         item-text="name"
         item-value="value"
         v-model="defaultWhose"      
         :items="whose"
         @input="colorByWhose($event)" /> 
-    sex's tape?</p>  
-    <p class="my-3"><strong>Show by </strong>
-      <v-chip
-        v-for="(item) in filterlist"
-        :key="item.id"
-        class="ml-1 px-3 flat"
-        @click="drawBars(item.id)">
-        <abbr :title="item.description">{{ item.id }}</abbr>
-      </v-chip>
-    </p>
+      sex's tapes?</p>  
     <!-- Viz Starts here -->
     <div id="chart" class="my-4">
       <svg id="colorsSVG"/>
       <v-card
         v-show="tooltip.show"
-        class="viz-tooltip"
+        class="viz-tooltip pa-3"
+        flat
         :style="{ top: `${tooltip.move.top}px`, left: `${tooltip.move.left}px` }"
       >
-        <v-card-subtitle class="caption">
-          <p class="mb-0 pb-0">{{ tooltip.name }}</p>
-          <p class="mb-0 pb-0"><strong>Hex code:</strong> {{ tooltip.hex }}</p>
-        </v-card-subtitle>
+        <p class="mb-0 pb-0 text--body-1 font-tertiary">{{ tooltip.name }}</p>
       </v-card>       
     </div>
   </div>
@@ -43,8 +32,8 @@ import _kebabCase from 'lodash.kebabcase';
 export default {
   data() {
     return {
-      innerWidth: 600,
-      innerHeight: 180,
+      innerWidth: 700,
+      innerHeight: 250,
       filterlist: [
         {id: 'pronoun [your]', description: 'Title of YOUR sex tap'},
         {id: 'every time Jake said it', description: 'and the times that he did not'},
@@ -160,12 +149,14 @@ export default {
         .selectAll('rect.sex-tape')
         .data(d => d.value)
         .enter()
-        .append('rect')
+        // .append('rect')
+        .append('text')
+        .text('📼')
         .attr('class', 'sex-tape')        
         .attr('x', d => this.vizSettings.scale.x(+d.season))
-        .attr('y', (d, i) => this.vizSettings.scale.y(d.startY) - i * 10)
-        .attr('width', this.innerWidth / 10)
-        .attr('transform', `translate(${(this.innerWidth / 6 - this.innerWidth / 9) / 2}, 0)`)
+        .attr('y', (d, i) => this.vizSettings.scale.y(d.startY) - i * 18)
+        // .attr('width', this.innerWidth / 2)
+        .attr('transform', `translate(35, 0)`)
         .attr('height',  (d) => this.vizSettings.scale.y(d.startY) - this.vizSettings.scale.y(d.endY));
       
       this.colorByWhose('all');
@@ -173,21 +164,15 @@ export default {
     },
     colorByWhose(selected) {
       const selectedPerson = this.kebabCase(selected);
-      const people = {
-        Amy: 'red', 
-        Jake: 'yellow',
-        Holt: 'green',
-        Boyle: 'purple'
-      }
-      d3.selectAll('rect.sex-tape')
-        .attr('fill', d => people[d.whoseSexTape]);
+      d3.selectAll('text.sex-tape')
+        .attr('opacity', 1);
       
-      d3.selectAll('rect.sex-tape')
+      d3.selectAll('text.sex-tape')
         .attr('opacity', d => {
           if (selectedPerson === 'all') {
             return 1
           } else {
-            return this.kebabCase(d.whoseSexTape) === selectedPerson ? 1 : 0.1
+            return this.kebabCase(d.whoseSexTape) === selectedPerson ? 1 : 0.25
           }
         });
     },    
@@ -275,13 +260,12 @@ export default {
 }
 
 .viz-tooltip {
-  width: 200px;
+  max-width: 300px;
   // @media only screen and (max-width: 600px) {
   //   width: 160px;
   // }
   position: absolute;
-  background-color: #fff;
-  color: rgba(0,0,0,.7);
+  background-color: #fff534 !important;
 }
 
 
@@ -304,6 +288,10 @@ div .v-input >>> .v-input__slot{
 ::v-deep .v-select__selection {
   font-size: 20px;
 }
+</style>
 
-
+<style>
+text.sex-tape {
+  font-size: 1.8rem;
+}
 </style>
