@@ -14,6 +14,7 @@
       <v-col class="scrolly__content">
 
         <div class="step first" data-step="1">
+          <img src="02x03_side_edit.png" width="50%" style="margin-left: -10%;" />
           <div class="text-block">
             <p class="text--body-1 font-weight-bold">2 Cools: S02E03 - The Jimmy Jab Games</p>
             <p class="text--body-3">
@@ -24,6 +25,7 @@
         </div>
 
         <div class="step" data-step="2">
+          <img src="03x08_side_edit.png" width="50%" style="margin-left: -10%;" />
           <div class="text-block">
             <p class="text--body-1 font-weight-bold">3 Cools: S03E08 - Ava</p>
             <p class="text--body-3">
@@ -34,6 +36,7 @@
         </div>
 
         <div class="step" data-step="3">
+          <img src="05x20_side_edit.png" width="50%" />
           <div class="text-block">
             <p class="text--body-1 font-weight-bold">3 Cools (worried ver.): S05E20 - Show Me Going</p>
             <p class="text--body-3">
@@ -44,16 +47,18 @@
         </div>
 
         <div class="step" data-step="4">
+          <img src="02x10_side_edit.png" width="40%" style="margin-right: -30%;" />
           <div class="text-block">
             <p class="text--body-1 font-weight-bold">7 Cools: S02E10 - The Pontiac Bandit Returns</p>
             <p class="text--body-3">
               Some might call this the first official cool-cool-cool, as Jake goes undercover with Rosa and a string of seven "cool"s camouflages his nervousness in the presence of Tito Ruiz.
             </p>
-            <iframe style="margin-left: auto; margin-right: auto; display: block;" width="560" height="315" class="my-8" src="https://www.youtube.com/embed/zDcbpFimUc8?start=0&end=5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <img class="cool-img" src="02x10_coolcool.png" />
           </div>
         </div>
 
         <div class="step" data-step="5">
+          <img src="06x12_side2_edit.png" width="50%" style="margin-right: -10%;" />
           <div class="text-block">
             <p class="text--body-1 font-weight-bold">10 Cools: S06E12 - Casecation</p>
             <p class="text--body-2"><em>"I don't know that I totally know that I for sure want to have kids, so..."</em></p>
@@ -68,6 +73,7 @@
         </div>
 
         <div class="step last" data-step="6">
+          <img src="02x11_jake_edit.png" height="100%" style="margin-top: -10%; margin-right: -15%;" />
           <div class="text-block" style="margin-bottom: 300px;">
             <p class="text--body-1 font-weight-bold">Many Many Cools</p>
             <p class="text--body-3">
@@ -90,6 +96,7 @@
               Boyle machine-guns "cool"s and faints upon meet Nikolaj's birth father.
             </p>
           </div>
+          <img src="02x11_charles_edit.png" height="100%" style="margin-top: -10%; margin-left: -20%;" />
         </div>
       </v-col>     
     </v-row>

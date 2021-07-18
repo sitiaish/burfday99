@@ -22,7 +22,7 @@
           </p>
 
           <p class="text--body-1">
-            SK scrapped B99 dialog from here. And we try to something per character based on the dialog data that we have. Also the lines were not tagged to the character that spoke it, so we were limited that way. Pretty cool cool cool cool birthday gift!  
+            SK scrapped B99 dialog from <a href="https://transcripts.foreverdreaming.org/viewforum.php?f=429">here</a>. And we tried to do something per character based on the dialog data that we have. Also the lines were not tagged to the character that spoke it, so we were limited that way. Pretty cool cool cool cool birthday gift!  
           </p> 
         </v-col>
       </v-row>
