@@ -22,11 +22,11 @@
     </v-container>
 
     <div>
-      <v-row justify="center">
-        <v-col cols="6" style="background-color: red">
+      <v-row class="holt-wuntch-title" justify="center">
+        <v-col cols="6" class="holt-title" style="background-color: rgba(0, 0, 255, 0.2); color: white;">
           <p class="text--header text-right">Holt</p>
         </v-col>
-        <v-col cols="6"  style="background-color: blue">
+        <v-col cols="6"  style="background-color: rgba(255, 0, 0, 0.2); color: white;">
           <p class="text--header  holt-hyphen">Wuntch</p>
         </v-col>        
       </v-row>
@@ -59,7 +59,7 @@ export default {
 
 <style lang="scss" scoped>
 .section_wrapper {
-  background: white;
+  background: #fff534;
 }
 
 .scroll-prompt {
@@ -76,6 +76,17 @@ export default {
   transform: translate(-50%);
 }
 
+.text--header {
+  margin-bottom: 0;
+}
+
+.holt-wuntch-title {
+  background-image: url(/holt_wuntch.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 .holt-hyphen {
   position: relative;
 }
@@ -86,5 +97,6 @@ export default {
   top: 0;
   bottom: 0;
   left: -23px;
+  color: white;
 }
 </style>
