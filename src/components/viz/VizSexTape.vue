@@ -3,6 +3,7 @@
   <div class="my-5">
     <p class="text--h4 font-tertiary text-center">What are the titles of 
       <v-select 
+        style="width: 130px;"
         item-text="name"
         item-value="value"
         v-model="defaultWhose"      
