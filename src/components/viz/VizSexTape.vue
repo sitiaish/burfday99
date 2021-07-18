@@ -13,14 +13,23 @@
     <!-- Viz Starts here -->
     <div id="chart" class="my-4">
       <svg id="colorsSVG"/>
-      <v-card
+      <!-- <v-card
         v-show="tooltip.show"
         class="viz-tooltip pa-3"
         flat
         :style="{ top: `${tooltip.move.top}px`, left: `${tooltip.move.left}px` }"
       >
         <p class="mb-0 pb-0 text--body-1 font-tertiary">{{ tooltip.name }}</p>
-      </v-card>       
+      </v-card> -->
+      <v-card
+        v-show="tooltip.show"
+        class="viz-tooltip pa-3 tooltip-container"
+        flat
+        :style="{ top: `${tooltip.move.top}px`, left: `${tooltip.move.left}px` }"
+      >
+        <img src="tape.png" style="width: 100%;"/>
+        <div class="centered" style="background-color: white; font-family: 'Poor Story';">{{ tooltip.name }}</div>
+      </v-card>
     </div>
   </div>
 </v-container>
@@ -214,6 +223,7 @@ export default {
           d3.select('.viz-tooltip')
             .style('top', `${posTop}px`)
             .style('left', `${posLeft}px`);
+          d3.select(this).style("cursor", "pointer");
         })
         .on('mouseleave.design', function hideBox() {
           // remove highlight from the circle
@@ -255,6 +265,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.tooltip-container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 #chart {
   position: relative;
   border-top: 1px dashed grey;
@@ -269,6 +292,9 @@ export default {
   background-color: #fff534 !important;
 }
 
+.sex-tape {
+  cursor: pointer;
+}
 
 div .v-input {
   width: 120px;
