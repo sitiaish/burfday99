@@ -6,7 +6,8 @@
         <v-row justify="center" align="center">  
           <v-col cols="12" md="8" class="text-center">
             <p class="text--h2 font-tertiary--poorfamily">i am sad that</p>
-            <h1 id='title'><em>BROOKLYN<br/>NINE-NINE</em></h1> 
+            <!-- <h1 id='title'><em>BROOKLYN<br/>NINE-NINE</em></h1>  -->
+            <img src="Brooklyn_Nine-Nine_Logo.png" />
             <p class="text--h2 font-tertiary--poorfamily">is ending at season 8</p>
           </v-col>
         </v-row>
@@ -59,7 +60,13 @@ export default {
 
 <style lang="scss" scoped>
 .section-intro {
-  background: radial-gradient(47.59% 100.11% at 50% 47.6%, #ffffff 0%, #3e77bb 100%);
+  background: radial-gradient(47.59% 100.11% at 50% 47.6%, #000000 0%, #00427b 100%);
+  color: white;
+}
+
+.section-intro a {
+  color: white;
+  border-bottom: 2px solid white;
 }
 
 .section-intro-landing {

@@ -1,50 +1,20 @@
 <template>
   <div class="pa-12">
-    <v-row no-gutters>
+    <v-row class="data-row" no-gutters align="center" justify="center" v-for="(data, id) in groupedData" :key="id">
       <!-- use a v-for to populate the divs  -->
-      <v-col cols="3">
+      <v-col cols="1">
+        <h2>S{{data[1][0].season}}E{{data[1][0].episode}}</h2>
+      </v-col>
+      <v-col cols="8">
         <div class="pa-3">
           <p 
-            v-for="(n, i) in data"
+            v-for="(n, i) in data[1]"
             :key="i"
-            :class="['mb-0, line', n.who, n.type]"> 
+            :class="['mb-0, line', n.who === 'Wuntch' || n.who === 'Holt' ? n.who : 'other', n.type]"> 
               {{n.line}}
           </p>
         </div>
       </v-col>
-
-      <v-col cols="3">
-        <div class="pa-3">
-          <p 
-            v-for="(n, i) in data"
-            :key="i"
-            :class="['mb-0, line', n.who, n.type]"> 
-              {{n.line}}
-          </p>
-        </div>
-      </v-col>
-
-      <v-col cols="3">
-        <div class="pa-3">
-          <p 
-            v-for="(n, i) in data"
-            :key="i"
-            :class="['mb-0, line', n.who, n.type]"> 
-              {{n.line}}
-          </p>
-        </div>
-      </v-col>
-      
-      <v-col cols="3">
-        <div class="pa-3">
-          <p 
-            v-for="(n, i) in data"
-            :key="i"
-            :class="['mb-0, line', n.who, n.type]"> 
-              {{n.line}}
-          </p>
-        </div>
-      </v-col>                  
     </v-row>
   </div>
 </template>
@@ -101,8 +71,21 @@ export default {
   },   
   mounted() {
     // to run format data on load
+    this.loadData()
+  },
+  computed: {
+    groupedData() {
+      return d3.group(this.data, d => d.id)
+    }
   },
   methods: {
+    async loadData() {
+      this.data = await d3.csv('/data/wuntch-holt.csv')
+      this.$nextTick(() => {
+        console.log('test')
+        console.log(this.groupedData)
+      })
+    },
     formatData() {
       // load csv
       // group data by id
@@ -167,33 +150,69 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.wuntch {
+.Wuntch {
   background: repeating-linear-gradient(
     45deg,
     rgba(0, 0, 0, 0.4),
     rgba(0, 0, 0, 0.4) 10px,
     rgba(0, 0, 0, 0.5) 10px,
-    rgba(0, 0, 0, 0.5) 20px), blue;}
+    rgba(0, 0, 0, 0.5) 20px), #eb2f06;
+}
 
-.holt {
+.Wuntch:before {
+  content: url(/wuntch_tiny.png);
+  vertical-align: text-top; 
+}
+
+.Holt {
   background: repeating-linear-gradient(
     45deg,
     rgba(0, 0, 0, 0.4),
     rgba(0, 0, 0, 0.4) 10px,
     rgba(0, 0, 0, 0.5) 10px,
-    rgba(0, 0, 0, 0.5) 20px), red;
+    rgba(0, 0, 0, 0.5) 20px), #1e3799;
+}
+
+.Holt:before {
+  content: url(/holt_tiny.png);
+  vertical-align: text-top; 
+}
+
+.other {
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.4) 10px,
+    rgba(0, 0, 0, 0.5) 10px,
+    rgba(0, 0, 0, 0.5) 20px), #57606f;
+}
+
+.data-row {
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 2px;
+}
+
+.data-row:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
 }
 
 .line {
-  padding: 0 4px;
+  padding: 0px 4px;
+  //margin: 5px;
   margin-right: 8px;  
   display: inline;
   border-radius: 25px;
   font-size: 18px;
-  color: transparent;
+  //color: transparent;
+  color: grey;
   user-select: none;
   cursor: pointer;  
   overflow-wrap: break-word;
+}
+
+.line:hover {
+  color: white;
 }
 
 .insult {

@@ -1,7 +1,7 @@
 <template>
-  <v-container class="scrolly-overlay">
+  <v-container class="cool-scrolly-overlay">
     <v-row justify="space-between" align="start">  
-      <v-col cols="12" class="casestudy-scrolly scrolly__sticky" >
+      <v-col cols="12" class="cool-casestudy-scrolly cool-scrolly__sticky" >
         <svg id='coolcool-viz'></svg>
         <div id='cool-intro' class="text-block" >
           <h3 class="text--h2 mb-16 scroll-prompt text-center">The times they said cool cool</h3>
@@ -11,9 +11,9 @@
           </p>
         </div>
       </v-col>
-      <v-col class="scrolly__content">
+      <v-col class="cool-scrolly__content">
 
-        <div class="step first" data-step="1">
+        <div class="cool-step first" data-step="1">
           <img src="02x03_side_edit.png" width="50%" style="margin-left: -10%;" />
           <div class="text-block">
             <p class="text--body-1 font-weight-bold">2 Cools: S02E03 - The Jimmy Jab Games</p>
@@ -24,7 +24,7 @@
           </div>
         </div>
 
-        <div class="step" data-step="2">
+        <div class="cool-step" data-step="2">
           <img src="03x08_side_edit.png" width="50%" style="margin-left: -10%;" />
           <div class="text-block">
             <p class="text--body-1 font-weight-bold">3 Cools: S03E08 - Ava</p>
@@ -35,7 +35,7 @@
           </div>
         </div>
 
-        <div class="step" data-step="3">
+        <div class="cool-step" data-step="3">
           <img src="05x20_side_edit.png" width="50%" />
           <div class="text-block">
             <p class="text--body-1 font-weight-bold">3 Cools (worried ver.): S05E20 - Show Me Going</p>
@@ -46,7 +46,7 @@
           </div>
         </div>
 
-        <div class="step" data-step="4">
+        <div class="cool-step" data-step="4">
           <img src="02x10_side_edit.png" width="40%" style="margin-right: -30%;" />
           <div class="text-block">
             <p class="text--body-1 font-weight-bold">7 Cools: S02E10 - The Pontiac Bandit Returns</p>
@@ -57,7 +57,7 @@
           </div>
         </div>
 
-        <div class="step" data-step="5">
+        <div class="cool-step" data-step="5">
           <img src="06x12_side2_edit.png" width="50%" style="margin-right: -10%;" />
           <div class="text-block">
             <p class="text--body-1 font-weight-bold">10 Cools: S06E12 - Casecation</p>
@@ -72,7 +72,7 @@
           </div>
         </div>
 
-        <div class="step last" data-step="6">
+        <div class="cool-step last" data-step="6">
           <img src="02x11_jake_edit.png" height="100%" style="margin-top: -10%; margin-right: -15%;" />
           <div class="text-block" style="margin-bottom: 300px;">
             <p class="text--body-1 font-weight-bold">Many Many Cools</p>
@@ -140,14 +140,14 @@ export default {
       const scrollerDesktop = scrollama();
 
       const stepH = Math.floor(window.innerHeight * 0.5);
-      d3.selectAll('.step').style("height", stepH + "px");
+      d3.selectAll('.cool-step').style("height", stepH + "px");
       // d3.selectAll('.step.first').style("height", null);
 
       // setup scrollama
       scrollerDesktop.setup({
-        container: '.scrolly-overlay',
-        graphic: '.scrolly-overlay .scrolly__sticky',
-        step: '.scrolly-overlay .scrolly__content .step', // required
+        container: '.cool-scrolly-overlay',
+        graphic: '.cool-scrolly-overlay .cool-scrolly__sticky',
+        step: '.cool-scrolly-overlay .cool-scrolly__content .cool-step', // required
         offset: 0.7,
         debug: false,
         progress: true
@@ -175,7 +175,7 @@ export default {
         d3.select('div#cool-intro')
           .style('opacity', 1 - p)
       }
-      d3.selectAll('.step')
+      d3.selectAll('.cool-step')
         .style('opacity', 0)
       d3.select(response.element)
         .style('opacity', () => {
@@ -192,7 +192,7 @@ export default {
 
 <style lang="scss" scoped>
 
-.scrolly-overlay {
+.cool-scrolly-overlay {
   max-width: 100%;
 }
 
@@ -203,11 +203,11 @@ img.cool-img {
   margin-right: auto;
 }
 
-.scroll-prompt {
+.cool-scroll-prompt {
   position: relative;
 }
 
-.scroll-prompt:after {
+.cool-scroll-prompt:after {
   content: '😎';
   position: absolute;
   top: calc(100% + 8px);
@@ -227,21 +227,21 @@ img.cool-img {
   margin-right: auto;
 }
 
-.casestudy-scrolly {
+.cool-casestudy-scrolly {
   z-index: 1000; 
 }
 
-.scrolly__overlay {
+.cool-scrolly__overlay {
   position: relative;
 }
 
-.scrolly__content {
+.cool-scrolly__content {
   position: relative;
   padding: 0 1rem;
   width: 100%;
 }
 
-.step {
+.cool-step {
   margin: 0 auto 2rem auto;
   // border: 2px solid #104E8B;
   display: flex;
@@ -253,7 +253,7 @@ img.cool-img {
 //   //margin-top: calc(25vh);
 // }
 
-.scrolly__sticky {
+.cool-scrolly__sticky {
   justify-content: center;  
   align-items: center;
   position: sticky;

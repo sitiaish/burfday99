@@ -27,7 +27,7 @@
           <p class="text--header text-right">Holt</p>
         </v-col>
         <v-col cols="6"  style="background-color: rgba(255, 0, 0, 0.2); color: white;">
-          <p class="text--header  holt-hyphen">Wuntch</p>
+          <p class="text--header holt-hyphen">Wuntch</p>
         </v-col>        
       </v-row>
     </div>
@@ -80,6 +80,10 @@ export default {
   margin-bottom: 0;
 }
 
+.text-right {
+  padding-right: 50px;
+}
+
 .holt-wuntch-title {
   background-image: url(/holt_wuntch.png);
   background-size: cover;
@@ -89,14 +93,15 @@ export default {
 
 .holt-hyphen {
   position: relative;
+  padding-left: 50px;
 }
 
 .holt-hyphen:before {
-  content: '-';
+  content: 'vs';
   position: absolute;
   top: 0;
   bottom: 0;
-  left: -23px;
+  left: -45px;
   color: white;
 }
 </style>
