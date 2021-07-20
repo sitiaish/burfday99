@@ -15,8 +15,6 @@
             this Wuntch-Holt wiki page
             </a>. 
           </p>
-
-          <iframe width="560" height="315" class="my-8" src="https://www.youtube.com/embed/tqf5slEsdh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>         
         </v-col>
       </v-row>
     </v-container>
@@ -32,9 +30,9 @@
       </v-row>
     </div>
 
-    <VizWuntchHolt />
-
     <VizWuntchHoltInsults />
+    <VizWuntchHolt />
+    
   </section>
 </template>
 

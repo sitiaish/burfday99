@@ -1,30 +1,30 @@
 <template>
   <div class="scrolly-overlay-insults">
-    <v-row justify="space-between" align="start"  class="scrolly__sticky">  
+    <v-row justify="space-between" align="start"  class="scrolly__sticky" no-gutters>  
       <v-col cols="6">
-        <v-row justify="space-between">
+        <v-row justify="space-between" no-gutters>
           <v-col cols="6">
             <img src="@/assets/holt.png" width="100%" />
           </v-col>
 
           <v-col cols="6">
-            <div>
+            <!-- <div>
               <p class="text--h2">
                 sticks and stones
               </p>              
-            </div>
+            </div> -->
           </v-col>          
         </v-row>
       </v-col>
 
       <v-col cols="6">
-        <v-row justify="space-between">
+        <v-row justify="space-between" no-gutters>
           <v-col cols="6">
-            <div>
+            <!-- <div>
               <p class="text--h2">
                 how creative are these insults? 
               </p>              
-            </div>
+            </div> -->
           </v-col>             
           <v-col cols="6" offset="6">
             <img src="@/assets/wuntch.png" width="100%" />
@@ -33,15 +33,12 @@
       </v-col>
 
       <v-col cols="6" class="wuntch-holt-insults-intro" >
-        <p class="text--header text-center" style="opacity: 0.2">
-          sticks and stones, <br>
-          raymond
-        </p>
+        <iframe width="560" height="315" class="my-8" src="https://www.youtube.com/embed/tqf5slEsdh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>         
+
         {{ step }}
       </v-col>
     </v-row>
 
-<!-- style="border: 2px solid red;" -->
     <div >
       <v-container class="inner scrolly__content">
           <div class="step" data-step="1">
@@ -243,10 +240,14 @@ img.cool-img {
 
 .wuntch-holt-insults-intro {
   position: relative;
-  top: -50%;
+  top: -25%;
   left: 50%;
   transform: translate(-50%, -50%);
-  // border: 2px solid red;
+  
+  iframe {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 .highlight-holt {

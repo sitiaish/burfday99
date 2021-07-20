@@ -1,14 +1,15 @@
 <template>
   <section class="section_wrapper py-12">
     <v-container class="py-12">
-      <v-row align="start" justify="center" class="py-6">
+      <v-row align="center" justify="center">
         <v-col cols="12" md="4">
           <div
             data-aos="slide-right"
             data-aos-ease = "ease"
             data-aos-duration="1000"
             data-aos-delay="100">
-            <img src="@/assets/terry-yogurt.png" width="100%" />
+            <img v-if="count % 2 === 1" src="@/assets/terry-yogurt.png" width="100%" />
+            <img v-if="count % 2 === 0" src="@/assets/terry-yogurt-2.png" width="100%" />            
           </div>
         </v-col>
         <v-col cols="12" md="8">
@@ -33,7 +34,7 @@
 
           <div class="pt-12">
             <p class="text--body-1">            
-              The running gag with Terry is that he refers to himself in the third person -- "You made Terry get real with himself and his genitals. [02x2 Chocolate Milk]". And that he loves yogurt. I wanted to see what else Terry loves besides yogurt. We went ahead to find instances in B99 with "Terry love". We expanded this to include "Terry like". 
+              The running gag with Terry is that he refers to himself in the third person -- "You made Terry get real with himself and his genitals. [S0202 - Chocolate Milk]". And that he loves yogurt. I wanted to see what else Terry loves besides yogurt. We went ahead to find instances in B99 with "Terry love". We expanded this to include "Terry like". 
             </p>
 
             <p class="text--body-1">            
@@ -83,7 +84,7 @@
             </p>
 
             <p class="text--body-1">            
-              I guess it's more of how important yogurt is to Terrence that makes us remmember Terry loves yogurt and maybe less so of the number of times the line is spoken. Like even Captain Holt knows Terry loves his yogurt when the gag first started in Season 1 Episode 2, The Tagger. 
+              I guess it's more of how important yogurt is to Terrence that makes us remmember Terry loves yogurt and maybe less so of the number of times the line is spoken. Like even Captain Holt knows Terry loves his yogurt when the gag first started in S01E02 - The Tagger. 
             </p>
           </div>
         </v-col>        
@@ -98,7 +99,7 @@
               <img src="@/assets/yogurt-1.png" width="100%" />
               <div class="my-8">
                 <p class="text--h3 font-tertiary">
-                  S1E02 <em>The Tagger</em>
+                  S01E02 - The Tagger
                 </p>
                 <p class="text--body-2">
                   First mention of "Terry loves yogurt" when a police report was fished from Terry's trash with stains of yogurt.
@@ -108,7 +109,7 @@
             <div class="sample-card pa-6 pa-xl-8">
               <div class="mb-8">
                 <p class="text--h3 font-tertiary">
-                  S1E014 <em>The Ebony Falcon</em>
+                  S01E014 - The Ebony Falcon
                 </p>
                 <p class="text--body-2">
                   A personal favourite! Terry describes himself as <em> the ebony falcon</em>: monogamous and too tired for sex, so his only indulgence is fresh fruit yogurt parfaits. Jake echoes with "Terry loves yogurt".
@@ -120,7 +121,7 @@
               <img src="@/assets/yogurt-password.png" width="100%" />
               <div class="my-8">
                 <p class="text--h3 font-tertiary">
-                  S2E013 <em>Payback</em>
+                  S02E13 - Payback
                 </p>
                 <p class="text--body-2">
                   The team tries to hack into Terry's email, only to be stumped by password. Surprise, surprise -- the password, as guessed by Boyle, is "yogurt".
@@ -130,19 +131,19 @@
             <div class="sample-card pa-6 pa-xl-8">
               <div class="mb-8">
                 <p class="text--h3 font-tertiary">
-                  S3E02 <em>The Funeral</em>
+                  S03E02 - The Funeral
                 </p>
                 <p class="text--body-2">
                   Did you hear? Terry's favourite mango yogurt got discontinued! I love how he ranks this together with Sharon's bedrest and his kids thinking their preschool teacher a "stupidface". Yep they all stink Terry.
                 </p>
               </div>                    
-              <img src="@/assets/yogurt-password-2.png" width="100%" />             
+              <img src="@/assets/mango-yogurt.png" width="100%" />             
             </div>     
             <div class="sample-card pa-6 pa-xl-8">
-              <img src="@/assets/yogurt-password-2.png" width="100%" />
+              <img src="@/assets/yogurt-fridge.png" width="100%" />
               <div class="my-8">
                 <p class="text--h3 font-tertiary">
-                  S4E02 <em>Coral Palms Pt.2</em>
+                  S04E02 - Coral Palms Pt.2
                 </p>
                 <p class="text--body-2">
                   "Enjoy your blood yogurt" Terry caves under the chill-dude Captain Stentley and got a personal yogurt fridge at his desk. Which he eventually returns to save Jake and Holt at Coral Palms.
@@ -177,6 +178,7 @@ export default {
         thing: ''
       },
       translate: 0,
+      count: 0,
     };
   },
   async mounted() {
@@ -212,6 +214,7 @@ export default {
         const items = this.uniqueLoves;
         let title = document.getElementById('loves')
         for (let i=0; i < items.length; i++) {
+          this.count = i;
           if (title.innerHTML == items[i]) {
             if (i == items.length - 1) {
               title.innerHTML = items[0]

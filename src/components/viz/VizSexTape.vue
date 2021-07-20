@@ -13,22 +13,14 @@
     <!-- Viz Starts here -->
     <div id="chart" class="my-4">
       <svg id="colorsSVG"/>
-      <!-- <v-card
-        v-show="tooltip.show"
-        class="viz-tooltip pa-3"
-        flat
-        :style="{ top: `${tooltip.move.top}px`, left: `${tooltip.move.left}px` }"
-      >
-        <p class="mb-0 pb-0 text--body-1 font-tertiary">{{ tooltip.name }}</p>
-      </v-card> -->
       <v-card
         v-show="tooltip.show"
         class="viz-tooltip pa-3 tooltip-container"
         flat
         :style="{ top: `${tooltip.move.top}px`, left: `${tooltip.move.left}px` }"
       >
-        <img src="tape.png" style="width: 100%;"/>
-        <div class="centered" style="background-color: white; font-family: 'Poor Story';">{{ tooltip.name }}</div>
+        <img src="tape.png" width= 100% />
+        <div class="centered">{{ tooltip.name }}</div>
       </v-card>
     </div>
   </div>
@@ -276,11 +268,16 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-family: 'Poor Story', cursive;
+  font-weight: 700;
+  background-color: #ffffff;
+  box-shadow: 0 2px 1px #b3b3b3;
+  padding: 0 8px;
 }
 
 #chart {
   position: relative;
-  border-top: 1px dashed grey;
+  border-top: 1px dashed #b3b3b3;
 }
 
 .viz-tooltip {
