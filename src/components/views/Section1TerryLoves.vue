@@ -2,7 +2,7 @@
   <section class="section_wrapper py-12">
     <v-container class="py-12">
       <v-row align="center" justify="center">
-        <v-col cols="12" md="4">
+        <v-col cols="8" md="4">
           <div
             data-aos="slide-right"
             data-aos-ease = "ease"
@@ -14,11 +14,11 @@
         </v-col>
         <v-col cols="12" md="8">
           <div>
-          <h3 class="text--h1 text--header mb-2 mr-4">TERRY LOVES</h3>
+            <h3 class="text--header mb-2 mr-4 text-center text-lg-left">TERRY LOVES</h3>
           </div>
-          <div style="height: 140px;">
-          <p class="text--h1 text-left">
-          <span id="loves">love</span>
+          <div class="iterate-wrapper">
+            <p class="text--h1 text-center text-lg-left">
+            <span id="loves">love</span>
           </p>
           </div>
         </v-col>             
@@ -255,27 +255,6 @@ export default {
   //height: calc(100vh - 64px);
 }
 
-div .v-input {
-  width: 300px;
-  display: inline-block;
-  margin-left: 10px;
-}
-
-div .v-input >>> .v-input__slot{
-  background-color: #ffd4c2;
-  border-radius: 100px;
-}
-
-::v-deep .v-input__slot {
-  box-shadow: none !important;
-  margin-bottom: 0;
-}
-
-::v-deep .v-select__selection {
-  font-size: 20px;
-}
-
-
 #loves {
   font-weight: 500;
   border-bottom: 4px solid black;
@@ -341,49 +320,56 @@ div .v-input >>> .v-input__slot{
   font-weight: 400;
   line-height: 28px;
   font-family: 'Anton', sans-serif;
-  // color: #2e2e2e;  
   letter-spacing: 2px;
   text-transform: uppercase;  
 }
 
-// .tall-container {
-//   // border: 5px solid orange;
-// }
-
 .sticky {
   position: sticky;
-  top: 64px;
+  top: 40px;
   height: calc(100vh - 80px);
   width: 100%;
   overflow-x: hidden;
-  // background-color: pink;
 }
 
 .horizontal-container {
   position: absolute;
   height: 100%;
   will-change: transform;
-  // border: 2px solid purple;
 }
 
 .card-container {
   position: relative;
   height: 100%;
-  margin: 0 0 0 120px;
+  margin: 0 0 0 60px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
-  // border: 10px solid black;
-  // background-color: grey;
+  background-color: #002f88;
 }
 
 .sample-card {
   position: relative;
   height: 80%;
   width: 500px;
+  @media #{map-get($display-breakpoints, 'sm-and-down')} {
+    width: 300px;
+    height: 70%;    
+  }  
   background-color: yellow;
   margin-right: 75px;
   flex-shrink: 0;
+}
+
+.sample-card:first-child {
+  margin-left: 75px;
+}
+
+.iterate-wrapper {
+  height: 140px;
+  @media #{map-get($display-breakpoints, 'sm-and-down')} {
+    height: 180px;
+  }
 }
 </style>

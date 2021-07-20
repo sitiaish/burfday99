@@ -2,115 +2,142 @@
   <div class="scrolly-overlay-insults">
     <v-row justify="space-between" align="start"  class="scrolly__sticky" no-gutters>  
       <v-col cols="6">
-        <v-row justify="space-between" no-gutters>
-          <v-col cols="6">
-            <img src="@/assets/holt.png" width="100%" />
-          </v-col>
+        <v-row justify="center" no-gutters>
+          <v-col cols="12" lg="6">
+            <img src="@/assets/holt.png" width="80%" />
+            <div class=" text-left mt-6 px-6">
+              <div v-show="step >= 1">
+                <img v-for="(n, i) in 4" :key="i + 'holt5-1'" src="@/assets/holt5.png" class="count-stick"/>
+              </div>
+              <div v-show="step >= 3">
+                <img v-for="(n, i) in 3" :key="i + 'holt1-3'" src="@/assets/holt1.png" class="count-stick"/>
+                <img v-for="(n, i) in 1" :key="i + 'holt5-3'" src="@/assets/holt5.png" class="count-stick"/>
+              </div> 
+              <div v-show="step >= 4">
+                <img v-for="(n, i) in 3" :key="i + 'holt5-4'" src="@/assets/holt5.png" class="count-stick"/>
+              </div> 
+              <div v-show="step === 5">
+                <img v-for="(n, i) in 2" :key="i + 'holt1-5'" src="@/assets/holt1.png" class="count-stick"/>
+                <img v-for="(n, i) in 2" :key="i + 'holt5-5'" src="@/assets/holt5.png" class="count-stick"/>
 
-          <v-col cols="6">
-            <!-- <div>
-              <p class="text--h2">
-                sticks and stones
-              </p>              
-            </div> -->
-          </v-col>          
+              </div>                                                   
+            </div>              
+          </v-col>         
         </v-row>
       </v-col>
 
       <v-col cols="6">
-        <v-row justify="space-between" no-gutters>
-          <v-col cols="6">
-            <!-- <div>
-              <p class="text--h2">
-                how creative are these insults? 
-              </p>              
-            </div> -->
-          </v-col>             
-          <v-col cols="6" offset="6">
-            <img src="@/assets/wuntch.png" width="100%" />
+        <v-row justify="center" no-gutters>            
+          <v-col cols="12" lg="6">
+            <img src="@/assets/wuntch.png" width="80%" style="display: block; margin-left: auto;" />
+            <div class="text-right mt-6 px-6">
+              <div v-show="step >= 1">
+                <img v-for="(n, i) in 3" :key="i + 'wuntch1'" src="@/assets/wuntch1.png" class="count-stick"/>
+              </div>
+              <div v-show="step >= 2">
+                <img v-for="(n, i) in 1" :key="i + 'wuntch5'" src="@/assets/wuntch5.png" class="count-stick"/>
+                <img v-for="(n, i) in 1" :key="i + 'wuntch1'" src="@/assets/wuntch1.png" class="count-stick"/>
+              </div>      
+              <div v-show="step >= 3">
+                <img v-for="(n, i) in 1" :key="i + 'wuntch5'" src="@/assets/wuntch5.png" class="count-stick"/>
+                <img v-for="(n, i) in 1" :key="i + 'wuntch1'" src="@/assets/wuntch1.png" class="count-stick"/>
+              </div> 
+              <div v-show="step >= 4">
+                <img v-for="(n, i) in 4" :key="i + 'wuntch1'" src="@/assets/wuntch1.png" class="count-stick"/>
+              </div> 
+              <div v-show="step === 5">
+                <img v-for="(n, i) in 3" :key="i + 'wuntch1'" src="@/assets/wuntch1.png" class="count-stick"/>
+              </div>                                                   
+            </div>            
           </v-col>
         </v-row>      
       </v-col>
 
-      <v-col cols="6" class="wuntch-holt-insults-intro" >
-        <iframe width="560" height="315" class="my-8" src="https://www.youtube.com/embed/tqf5slEsdh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>         
-
-        {{ step }}
+      <v-col v-if="step === 1" cols="11" lg="6" class="wuntch-holt-insults-intro hidden-sm-and-down">
+        <iframe class="youtube-iframe my-8" src="https://www.youtube.com/embed/tqf5slEsdh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  {{step}}       
       </v-col>
     </v-row>
 
-    <div >
+    <div>
       <v-container class="inner scrolly__content">
           <div class="step" data-step="1">
             <div class="text-block">
-              <img src="03x08_side_edit.png" width="50%" />
+              <!-- <img src="03x08_side_edit.png" width="50%" /> -->
 
               <p class="text--h2 font-tertiary text-center">
-                Character references
+                Fantasy references
               </p>
 
               <p class="text--body-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro impedit tempore molestiae sunt repellat voluptatem voluptatum eligendi sequi officiis, natus ducimus harum repudiandae, vitae possimus nihil eius omnis nesciunt odio?
+                Holt gets points in my book for the creative references to fantasy characters like the wicked Witch (from Oz), the Cheuksin and the thing that gets summoned when you "say Bloody Mary three times". The most common of these are references to the devil. 
               </p>
+
+              <p class="text--body-2">
+                "As God says when Madeline Wuntch tries to sneak past into the gates of Heaven, "It ain't happening, honey" - S07E07 - Ding Dong. 
+              </p>              
             </div>
           </div>
 
           <div class="step" data-step="2">
             <div class="text-block">
-              <img src="03x08_side_edit.png" width="50%" />
+              <!-- <img src="03x08_side_edit.png" width="50%" /> -->
 
               <p class="text--h2 font-tertiary text-center">
                 Work-Roast
               </p>
 
               <p class="text--body-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro impedit tempore molestiae sunt repellat voluptatem voluptatum eligendi sequi officiis, natus ducimus harum repudiandae, vitae possimus nihil eius omnis nesciunt odio?
+                Wuntch definitely wins in this one. Not only does she <em>verbally</em> roasts Holt's career, she made Holt wear Paulie the Pigeon mascot when she "promoted" to a desk job as the head of NYPD Public Relations (S02E22 - The Chopper). Later in the season, she'd even demoted Holt for a year when she became acting commissioner in S06E18 - Suicide Squad. 
               </p>
             </div>
           </div>
 
           <div class="step" data-step="3">
             <div class="text-block">
-              <img src="05x20_side_edit.png" width="50%" />
+              <!-- <img src="05x20_side_edit.png" width="50%" /> -->
 
               <p class="text--h2 font-tertiary text-center">
                 Describing appearances
               </p>
 
               <p class="text--body-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro impedit tempore molestiae sunt repellat voluptatem voluptatum eligendi sequi officiis, natus ducimus harum repudiandae, vitae possimus nihil eius omnis nesciunt odio?
+                I'd say they are both pretty tied for these ones. The most common taunt on physical traits would have to do with each other's age. With that, comes wrinkly skin "like a raisin" and dying of old age.              
               </p>
             </div>
           </div>
 
           <div class="step" data-step="4">
             <div class="text-block">
-              <img src="03x08_side_edit.png" width="50%" />
+              <!-- <img src="03x08_side_edit.png" width="50%" /> -->
 
               <p class="text--h2 font-tertiary text-center">
                 Animals
               </p>
 
               <p class="text--body-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro impedit tempore molestiae sunt repellat voluptatem voluptatum eligendi sequi officiis, natus ducimus harum repudiandae, vitae possimus nihil eius omnis nesciunt odio?
+                HOLT GETS CREATIVE WITH THIS ONE AGAIN. <br> Insect? Yes, we have mold beetles. <br>Mammals? There's Madeline's rat hands. <br>Fish? <em>"Don't count your gross fish babies before they've hatched, Madeline."</em> <br>Reptile? Crocodile. 
               </p>
+
+              <p class="text--body-2">
+                Hotel? Trivago.
+              </p>              
             </div>
           </div>
 
           <div class="step" data-step="5">
             <div class="text-block">
-              <img src="03x08_side_edit.png" width="50%" />
+              <!-- <img src="03x08_side_edit.png" width="50%" /> -->
 
               <p class="text--h2 font-tertiary text-center">
                 just go with it
               </p>
 
               <p class="text--body-2">
-                These are others that don't make it to any of the categories but are still in the dataset. Some are like the punch lines that Holt painstakingly took the entire night to come up with -- <span class="font-tertiary text--body-3 highlight-holt">"It's Wuntch-time"</span> or <span class="font-tertiary text--body-3 highlight-holt">"Wuntch meat"</span>. 
+                These are others that don't make it to any of the categories but are still in the dataset. Some are like the punch lines that Holt painstakingly took the entire night to come up with -- <em>"It's Wuntch-time"</em> or <em>"Wuntch meat"</em>. 
               </p>
 
               <p class="text--body-2">
-                Or when Holt fired back <span class="font-tertiary text--body-3 highlight-holt">"Describing your breakfast"</span> to Wuntch's <span class="font-tertiary text--body-3  highlight-wuntch">"Sticks and stones, Raymond"</span>.
+                Or when Holt fired back <em>"Describing your breakfast"</em> to Wuntch's <em>"Sticks and stones, Raymond"</em>.
               </p>              
             </div>
           </div>
@@ -127,7 +154,13 @@ export default {
   name: 'VizWuntchHoltInsults',
   data() {
     return {
-      coolSegments: [1, 1, 2, 4, 4, 4, 4, 5, 5, 5, 6, 6, 6, 6, 6], 
+      count: [
+        { id: '1', type: 'fantasy', holt1: 0, holt5: 4, wuntch1: 3, wuntch5: 0 },
+        { id: '2', type: 'work', holt1: 0, holt5: 0, wuntch: 1, wuntch5: 1 },
+        { id: '3', type: 'physical', holt1: 3, holt5: 1, wuntch: 1, wuntch5: 1 },
+        { id: '4', type: 'animal', holt1: 0, holt5: 3, wuntch: 4, wuntch5: 0 },
+        { id: '5', type: 'others', holt1: 2, holt5: 2, wuntch: 3, wuntch5: 0 },
+      ], 
       step: 0,
     };
   },
@@ -162,7 +195,7 @@ export default {
         container: '.scrolly-overlay-insults',
         graphic: '.scrolly-overlay-insults .scrolly__sticky',
         step: '.scrolly-overlay-insults .scrolly__content .step', // required
-        offset: 0.2,
+        offset: 0.7,
         debug: false,
       })
       .onStepEnter(this.handleStepEnter)
@@ -207,7 +240,11 @@ img.cool-img {
   color: #2E2E2E;
   padding: 24px;
   width: 80%;
-  min-width: 250px;
+  min-width: 235px;
+  @media #{map-get($display-breakpoints, 'sm-and-down')} {
+    width: 80%;
+    padding: 12px;
+  }       
 
   img {
     display: block;
@@ -223,7 +260,6 @@ img.cool-img {
 
 .step {
   margin: 0 auto 2rem auto;
-  // border: 2px solid #104E8B;
   display: flex;
   justify-content: center;
   align-items: center;    
@@ -258,5 +294,20 @@ img.cool-img {
 .highlight-wuntch {
   background-color: #4336A7;
   color: white;
+}
+
+.youtube-iframe {
+  width: 535px;
+  height: 315px;
+  @media #{map-get($display-breakpoints, 'sm-and-down')} {
+    width: 100%;
+  }      
+}
+
+.count-stick {
+  height: 50px;
+  @media #{map-get($display-breakpoints, 'sm-and-down')} {
+    height: 35px;
+  }      
 }
 </style>

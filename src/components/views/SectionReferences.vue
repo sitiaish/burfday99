@@ -28,7 +28,8 @@ export default {
 
 <style lang="scss" scoped>
 .section_wrapper {
-  background-color: #fff534;
+  background: radial-gradient(47.59% 100.11% at 50% 47.6%, #000000 0%, #002f88 100%);
+  color: white;
 }
 
 .menu {
