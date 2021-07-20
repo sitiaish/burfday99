@@ -1,0 +1,219 @@
+id,season,episode,who,line,type,length
+1,02,02,Wuntch,"Hello, Raymond.",,2
+1,02,02,Holt,Captain Wuntch. Good to see you.,,6
+1,02,02,Holt,"But if you're here, who's guarding Hades?",fantasy,7
+1,02,02,Wuntch,It's deputy chief Wuntch now.,,5
+1,02,02,Wuntch,"Unsurprisingly, I've been promoted above you. And now I'm here to evaluate you.",work,13
+1,02,02,Holt,What happened to Brandt?,,
+2,02,02,Wuntch,"Spot-checks are done. Needless to say, I'm thoroughly underwhelmed.",,9
+2,02,02,Holt,"Huh. From your expression, I would've guessed constipated or chilly.",physical,10
+2,02,02,Amy,"Excuse me, captain.",,3
+3,02,03,Holt,"Street name, giggle pig.",,4
+3,02,03,Wuntch,"Hmm, an embarrassing blight growing right under your nose.",,9
+3,02,03,Wuntch,Not unlike that moustache you had when we first met.,physical,10
+3,02,03,Holt,That moustache was era-appropriate.,,4
+4,02,05,Jake,"Fantastic, he loved me.",,
+4,02,05,Jake,"I would give you more details, but someone just came in to try and find her dalmatian coat.",fantasy,18
+4,02,05,Wuntch,"Hello, Raymond.",,2
+4,02,05,Holt,Madeline.,,1
+4,02,05,Holt,I wondered why all the birds had suddenly stopped singing.,others,10
+4,02,05,Holt,What brings you here?,,4
+4,02,05,Wuntch,I heard you were under investigation by lnternal Affairs..,,9
+4,02,05,Wuntch,Didn't wanna miss that.,work,4
+4,02,05,Holt,So much time with your ear to the pavement. It's a pity a truck hasn't run over your head.,others,19
+4,02,05,Wuntch,Very visual.,,2
+4,02,05,Wuntch,"When, oh when, will you quit police work and pursue your dream of poetry?",work,14
+4,02,05,,...,,0
+5,02,05,Wuntch,"Oh, Raymond.",,2
+5,02,05,Wuntch,An lnternal Affairs investigation? A drug task force that hasn't found any drugs? This precinct's a disaster.,work,17
+5,02,05,Wuntch,Maybe that's why the birds stopped singing. Out of respect for the death of your career.,work,24
+5,02,05,Wuntch,"Good-bye, Raymond.",,2
+6,02,05,Jake,"Oh, is that a fact?",,5
+6,02,05,Jake,"Because I heard you call deputy chief Wuntch by her first name and after that, you told her you hoped she got carried off by crows.",others,26
+6,02,05,Jake,That is gross insubordination.,,4
+7,02,05,Holt,You're going to leave my precinct and my task force alone. Or else...You're...,,13
+7,02,05,Holt,Wuntch meat.,others,2
+7,02,05,Jake,You're sure you wanna go with that one?,,8
+8,02,11,Wuntch,Raymond.,,1
+8,02,11,Holt,Madeline.,,1
+8,02,11,Wuntch,"You won. Go ahead and gloat, you toad.",animal,8
+8,02,11,Holt,"Thank you for this honor, deputy chief.",,7
+8,02,11,Wuntch,Oh. Okay. You're welcome.,,4
+8,02,11,Holt,Wuntch-time is over. Boom! Did it!,others,6
+8,02,11,Holt,Had it both ways.,,4
+9,02,14,Holt,"Oh, please stay, Diaz.",,4
+9,02,14,Holt,I need a witness in case her head starts spinning around or if she turns into a she-wolf.,animal,18
+9,02,14,Wuntch,"Hello, Raymond.",,2
+9,02,14,Holt,No flaccid rejoinder? Hmm. What's going on?,,7
+9,02,14,Wuntch,I'm here on important business. I'm a frontrunner for a job in the Boston PD.,,15
+9,02,14,Holt,"Boston? But it's so close to Salem. You do know what they do to witches up there, don't you?",fantasy,19
+9,02,14,Wuntch,The job is Chief of Police.,,6
+9,02,14,Holt,I see. So you've come to brag.,,7
+10,02,14,Holt,Just saying it brims my soul with joy.,,8
+10,02,14,Holt,But to do so would mean would mean that she stays here in New York City hanging over me like an albino bat.,animal,23
+10,02,14,Holt,"On the other hand, if I ""praise"" Wuntch, she will leave this city, the clouds will part, and the children will sing ""Wuntch is gone.""",others,25
+10,02,14,rosa,What children?,,2
+10,02,14,Holt,All the children.,others,3
+10,02,14,Rosa,Right. That was a stupid question.,,6
+11,02,22,Jake,I meant we have to fight her.,,7
+11,02,22,Holt,We're not gonna fight her. She's the devil.,fantasy,8
+11,02,22,Holt,"And you don't dance with the devil, because you get burned.",fantasy,11
+11,02,22,Holt,"Also, because in Madeline's case, she has no rhythm and her hands are like little rat claws.",animal,17
+11,02,22,Holt,"If she wants the case, it's hers.",,6
+12,02,22,Holt,Wait... Why would you say that?,,6
+12,02,22,Holt,And why aren't you clenching your little rat hands in anger?,animal,11
+12,02,22,Holt,You didn't want me to fail. You wanted me to succeed.,,10
+12,02,22,Wuntch,That's right. I was looking for an excuse to promote you to a desk job!,,15
+12,02,22,Wuntch,And you handed it to me on a silver platter with your little rat hands.,animal,15
+12,02,22,Holt,Oh no.,,2
+13,02,23,Wuntch,So here's how I see this going down.,,8
+13,02,23,Wuntch,You plead for your job back. I refuse.,work,8
+13,02,23,Wuntch,You start weeping like a war widow.,others,7
+13,02,23,Wuntch,Does that sound about right?,,5
+13,02,23,Holt,"Don't count your gross fish babies before they've hatched, Madeline.",animal,10
+13,02,23,Wuntch,How did you get this?,,5
+13,02,23,Gina,"Gina and Terry got it, you grackle.",animal,
+13,02,23,Holt,It doesn't matter how I got it.,,
+13,02,23,Gina,"Sorry, sir, didn't realize that was how you wanted to play it.",,
+13,02,23,Wuntch,I see you've got an audience for this little stunt?,,
+13,02,23,Holt,"Yes, well, who wouldn't want to see a man fight a crocodile?",animal,
+13,02,23,Holt,"Now, Madeline, before one of us starts weeping like a war widow, would you like to give me my precinct back?",others,
+13,02,23,Wuntch,It's not that simple; I can't just reverse your promotion.,,
+13,02,23,Holt,"You have until tomorrow, you grackle.",animal,
+13,02,23,,...,,
+14,03,01,Holt,Wuntch.,,
+14,03,01,Wuntch,"Hello, Raymond.",,
+14,03,01,Wuntch,You're looking old and sickly.,physical,
+14,03,01,Holt,"So nice of you to greet us, Madeline.",,
+14,03,01,Holt,I thought surely you'd still be crushed under that house in Munchkinland.,fantasy,
+14,03,01,Wuntch,"Sticks and stones, Raymond.",,
+14,03,01,Holt,Describing your breakfast?,others,
+14,03,01,Holt,"I came out as a gay cop in the 1980s, so it's gonna take more than reassigning me to break my spirit.",,
+15,03,01,Wuntch,"I like what you've done with your office, Raymond.",,
+15,03,01,Wuntch,"It's cozy, like a shoebox one buries a dead hamster in.",others,
+15,03,01,Holt,So what did you want to see me about?,,
+16,03,04,Gina,Wuntch is here.,,
+16,03,04,Wuntch,"Oh, there it is. The shriveled husk of Raymond Holt.",physical,
+16,03,04,Holt,"Look, Gina, is that a talking raisin?",physical,
+16,03,04,Wuntch,Enough foreplay.,,
+17,06,18,Wuntch,"Oh, Raymond, that you came to me to ask for help shows how much you've matured.",,
+17,06,18,Wuntch,You know what else shows how much you've matured? Your withered face.,physical,
+17,06,18,Holt,"Now I know why you refer to this as a Suicide Squad, Peralta, because I already want to kill myself.",others,
+17,06,18,Wuntch,Why don't you wait a week? You'll probably die of old age.,physical,
+17,06,18,Holt,"The only way I'm going to die is if you touch me with one of your bony fingers and drag me across the River Styx, you reaper.",fantasy,
+17,06,18,Jake,"Ah, wonderful. Very creative.",,
+18,06,18,Holt,It's probably Madeline.,,
+18,06,18,Holt,Cockroaches release a mucus-like secretion.,animal,
+18,06,18,Wuntch,"You would know about roaches, you roach.",animal,
+18,06,18,Jake,And three!,,
+19,06,18,Holt,I don't like this.,,
+19,06,18,Holt,"I wouldn't wish working with Madeline Wuntch on my worst enemy, and my worst enemy is Madeline Wuntch, whom I hate.",others,
+19,06,18,Jake,"Look, if you wanna stop Kelly, she's the key to my entire plan.",,
+20,06,18,Holt,I will never trust Madeline Wuntch.,,
+20,06,18,Holt,"She's a venomous snake waiting to strike, and you know what we do to snakes.",animal,
+20,06,18,Rosa,Chop their heads off. Remove the skin. Turn them into boots.,,
+20,06,18,Holt,Don't be absurd. Who would want Trollskin boots?,fantasy,
+20,06,18,Rosa,You just said she was a snake.,,
+20,06,18,Holt,The devil comes in many forms.,fantasy,
+20,06,18,Holt,"No, what I meant was I want you to follow her and make sure she doesn't betray us.",,
+21,06,18,Wuntch,Not possible. Kelly won't tell me anything. He won't even meet with me.,,
+21,06,18,Holt,Perhaps you can sneak in disguised as an old leather chair.,physical,
+21,06,18,Jake,Will you calm down?,,
+22,06,18,Wuntch,My mistake.,,
+22,06,18,Wuntch,These two goons were carrying a dirty old mop that looked exactly like you.,physical,
+22,06,18,Jake,What did you do?,,
+23,06,18,Wuntch,Here's your bug back.,,
+23,06,18,Wuntch,"It's not an actual bug, so don't eat it, you lizard.",animal,
+23,06,18,Holt,Ha! You didn't specify the subspecies of lizard.,,
+24,06,18,Wuntch,They're not allowed to do that.,,
+24,06,18,Wuntch,It's against the rules.,,
+24,06,18,Holt,"It's also against the rules to let a pile of worms wear a uniform, and yet here you stand.",animal,
+24,06,18,Jake,"Okay, just stop.",,
+24,06,18,Jake,"Look, sir, I've explained this.",,
+24,06,18,Jake,Wuntch is the only one that can get close to Kelly.,,
+24,06,18,Jake,We need her.,,
+24,06,18,Holt,Okay. The worm pile stays.,animal,
+24,06,18,Jake,Great.,,
+25,06,18,Wuntch,You must know some moves.,,
+25,06,18,Wuntch,"You were mentioned by name in the ""Monster Mash.""",,
+25,06,18,Holt,"Fine, but on two conditions. We stay at least 4 inches apart at all times, and you tuck your tail back into your pants so I don't trip on it.",fantasy,
+25,06,18,Wuntch,Deal.,,
+26,06,18,Holt,You move well.,,
+26,06,18,Holt,"Must be all the extra legs, you crab.",animal,
+26,06,18,Wuntch,Don't you find this exhausting?,,
+26,06,18,Holt,Thinking of fresh insults?,,
+26,06,18,Holt,"Not at all, you coffin cave mold beetle.",animal,
+26,06,18,Wuntch,I meant our relationship. Aren't you tired of the rivalry?,,
+26,06,18,Wuntch,"We fight and we fight, and nothing changes. But we're really not so different.",,
+26,06,18,Holt,I suppose we were close once. Remember Brighton Beach?,,
+26,06,18,Wuntch,"1,200 kilos of heroin in an abandoned subway tunnel. How could I forget?",,
+26,06,18,Holt,The largest drug bust in NYPD history pulled off by a most unlikely duo.,,
+26,06,18,Wuntch,"A woman, and a gay, black detective.",,
+26,06,18,Holt,"No, I meant a human and a rotted jack-o'-lantern.",others,
+26,06,18,Wuntch,Don't be so hard on yourself.,,
+26,06,18,Wuntch,You weren't all the way rotted back then.,others,
+26,06,18,Wuntch,That's John Kelly.,,
+27,06,18,Wuntch,He was smiling at me like an idiot.,,
+27,06,18,Holt,"You've betrayed us, you coffin cave mole beetle!",animal,
+27,06,18,,...,,
+28,07,07,Rosa,Terry said he had some news from the office of Commissioner Wuntch.,,
+28,07,07,Holt,What does that human blister want now?,others,
+28,07,07,Holt,Does she intend to demote me even further?,,
+28,07,07,Holt,Or perhaps she'll transfer me to the swamps of New Jersey so I can patrol the sinkhole where she was spawned.,fantasy,
+28,07,07,Jake,Or it's possible the announcement has nothing to do with you.,,
+28,07,07,Holt,"Oh, good thinking Peralta. You're right.",,
+28,07,07,Holt,Maybe Madeline wants to inform us all that she's a Cheuksin.,fantasy,
+28,07,07,Charles,A what?,,
+28,07,07,Holt,"A Cheuksin. A Korean toilet ghost, lives in an outhouse, wraps her hair around your throat and chokes you to death while you move your bowels.",,
+28,07,07,Jake,"You know what, I will give you $6,000 if the announcement is she's a Cheuksin.",,
+28,07,07,Terry,"Okay, everyone. I have some news.",,
+28,07,07,Holt,That Madeline Wuntch is a Korean toilet ghost?,fantasy,
+28,07,07,Holt,Boring. We already knew that.,,
+28,07,07,Terry,Madeline Wuntch is dead.,,
+28,07,07,Holt,Say what now?,,
+29,07,07,Holt,No way that's true.,,
+29,07,07,Holt,"As Wuntch says when she sees deodorant, I'm not buying it.",physical,
+29,07,07,Terry,"Sir, she's dead.",,
+29,07,07,Holt,Oh Terry.,,
+29,07,07,Holt,"Zombies can't die. This is some sort of scam. If she were dead, we would be hearing the sounds of children singing in the streets.",fantasy,
+29,07,07,Charles,"I don't know sir. You didn't believe it when we told you the Disco Strangler died, either.",,
+29,07,07,Holt,And I was right. He was faking it.,,
+29,07,07,Charles,Maybe she's alive.,,
+29,07,07,Terry,Why would Wuntch fake her own death?,,
+29,07,07,Holt,The same reason she visits Mexico once a year and sucks the blood from all the goats.,fantasy,
+29,07,07,Holt,For kicks.,,
+30,07,07,,...,,
+30,07,07,Holt,"Ding, dong, the Wuntch is dead. Bagels for everyone!",fantasy,
+30,07,07,Rosa,So I guess you believe it now.,,
+30,07,07,Holt,Yep. Wanna see the selfies I took?,,
+30,07,07,Rosa,"Actually, yes.",,
+30,07,07,Amy,Oh my god! I just heard about Wuntch! She was so young!,,
+30,07,07,Holt,For a redwood tree.,physical,
+30,07,07,Holt,"Uh, I don't understand what's going on. Why are you crying?",,
+30,07,07,Amy,I feel sad.,,
+30,07,07,Holt,"You don't feel sad when a monster dies in a monster movie. In ""E.T."", do you feel sad when E.T. dies?",fantasy,
+30,07,07,Amy,Yes.,,
+31,07,07,Holt,"Well, I know just the thing to cheer you up.",,
+31,07,07,Holt,Wuntch is dead! Bagel! Bagel! Bagel!,fantasy,
+31,07,07,Rosa,"Sir, I am loving this color on you, but don't you think you should tone it down?",,
+31,07,07,Holt,"Why, in case I run into her family? I'm not planning any trips to the Bronx Zoo.",animal,
+31,07,07,Amy,Wait.,,
+32,07,07,Holt,I'm going to play it. Brace yourselves.,,
+32,07,07,Holt,"If it shows Madeline, be sure not to look directly into her eyes.",,
+32,07,07,rosa,Because we'll turn to stone?,fantasy,
+32,07,07,Holt,"No, because her eyes are ugly.",physical,
+32,07,07,Wuntch,"Hello, Raymond. Surprised to see me?",,
+32,07,07,Holt,"Well, I didn't say Bloody Mary three times - so yes.",fantasy,
+32,07,07,Amy,When did she record this?,,
+32,07,07,Rosa,"Judging by the flames around her, it could be a livestream.",fantasy,
+32,07,07,Holt,Very good Rosa.,,
+33,07,07,Rosa,All you have to do is say a few nice comments during the memorial.,,
+33,07,07,Holt,"As God says when Madeline Wuntch tries to sneak past into the gates of Heaven, ""It ain't happening, honey""",fantasy,
+33,07,07,Holt,"I tried to write a kind speech about her last night, and this is what came out.",,
+34,07,07,,...,,
+34,07,07,Holt,Madeline smelled like dog crap. From a sick dog.,physical,
+34,07,07,Holt,Madeline Wuntch will not soon be forgotten. Trick or Treaters will dress like her for generations,fantasy,
+34,07,07,,...,,
+35,07,07,Amy,"Well, I think it's natural to feel a little down about her death. For the last 20 years, your lives have been entangled.",,
+35,07,07,Holt,Because of her ratty hair.,physical,
+35,07,07,Holt,"No, it's not the same. Now it just feels like I'm insulting a helpless dead person.",,
