@@ -367,9 +367,9 @@ export default {
 }
 
 .iterate-wrapper {
-  height: 140px;
+  height: 150px;
   @media #{map-get($display-breakpoints, 'sm-and-down')} {
     height: 180px;
-  }
+  }  
 }
 </style>

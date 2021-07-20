@@ -31,19 +31,19 @@
     </div>
 
     <VizWuntchHoltInsults />
-    <VizWuntchHolt v-if="$vuetify.breakpoint.mdAndUp" />
+    <VizWuntchHolt />
     
   </section>
 </template>
 
 <script>
-// import VizWuntchHolt from '@/components/viz/VizWuntchHolt'
+import VizWuntchHolt from '@/components/viz/VizWuntchHolt'
 import VizWuntchHoltInsults from '@/components/viz/VizWuntchHoltInsults'
 
 export default {
   name: 'Section',
   components: {
-    // VizWuntchHolt,
+    VizWuntchHolt,
     VizWuntchHoltInsults
   },
   data() {
