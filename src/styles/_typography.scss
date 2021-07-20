@@ -16,8 +16,8 @@ $color-secondary: #000000;
   font-family: 'Anton', sans-serif !important;
 
   @media #{map-get($display-breakpoints, 'sm-and-down')} {
-    font-size: 40px;
-    line-height: 52px;
+    font-size: 54px;
+    line-height: 68px;
   }
 }
 
@@ -27,8 +27,8 @@ $color-secondary: #000000;
   font-family: $font-primary;
 
   @media #{map-get($display-breakpoints, 'sm-and-down')} {
-    font-size: 54px;
-    line-height: 42px;
+    font-size: 48px;
+    line-height: 60px;
   }
 }
 

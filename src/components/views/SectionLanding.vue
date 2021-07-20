@@ -7,7 +7,7 @@
           <v-col cols="12" md="8" class="text-center">
             <p class="text--h2 font-tertiary--poorfamily">i am sad that</p>
             <!-- <h1 id='title'><em>BROOKLYN<br/>NINE-NINE</em></h1>  -->
-            <img src="Brooklyn_Nine-Nine_Logo.png" />
+            <img src="Brooklyn_Nine-Nine_Logo.png" width="90%"/>
             <p class="text--h2 font-tertiary--poorfamily">is ending at season 8</p>
           </v-col>
         </v-row>

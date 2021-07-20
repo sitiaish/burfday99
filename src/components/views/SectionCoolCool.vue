@@ -29,7 +29,6 @@ export default {
 <style lang="scss" scoped>
 .section_wrapper {
   background-color: #fff534;
-  //height: calc(100vh - 64px);
 }
 
 </style>

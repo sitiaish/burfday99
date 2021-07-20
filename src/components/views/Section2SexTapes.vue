@@ -1,6 +1,6 @@
 <template>
   <section class="section_wrapper py-12">
-    <v-container class="inner py-12">
+    <v-container class="inner">
       <h3 class="text--h2 mb-16 scroll-prompt text-center">Titles of (mostly) Amy's Sex Tapes</h3>
 
       <v-row align="center" justify="center" no-gutters class="py-6">
@@ -11,7 +11,7 @@
 
           img comic 
 
-          <iframe width="560" height="315" class="my-8" src="https://www.youtube.com/embed/idQR0oARcIY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>         
+          <iframe class="my-8 youtube-iframe" src="https://www.youtube.com/embed/idQR0oARcIY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>         
         </v-col>
       </v-row>
     </v-container>
@@ -180,5 +180,13 @@ div .v-input >>> .v-input__slot{
 @keyframes scrolling {
     0% { transform: translateX(0); }
     100% { transform: translatex(-100%); }
+}
+
+.youtube-iframe {
+  width: 560px;
+  height: 315px;
+  @media #{map-get($display-breakpoints, 'sm-and-down')} {
+    width: 100%;
+  }      
 }
 </style>

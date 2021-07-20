@@ -20,7 +20,7 @@
     </v-container>
 
     <div>
-      <v-row class="holt-wuntch-title" justify="center">
+      <v-row class="holt-wuntch-title" justify="center" no-gutters>
         <v-col cols="6" class="holt-title" style="background-color: rgba(0, 0, 255, 0.2); color: white;">
           <p class="text--header text-right">Holt</p>
         </v-col>
@@ -31,19 +31,19 @@
     </div>
 
     <VizWuntchHoltInsults />
-    <VizWuntchHolt />
+    <VizWuntchHolt v-if="$vuetify.breakpoint.mdAndUp" />
     
   </section>
 </template>
 
 <script>
-import VizWuntchHolt from '@/components/viz/VizWuntchHolt'
+// import VizWuntchHolt from '@/components/viz/VizWuntchHolt'
 import VizWuntchHoltInsults from '@/components/viz/VizWuntchHoltInsults'
 
 export default {
   name: 'Section',
   components: {
-    VizWuntchHolt,
+    // VizWuntchHolt,
     VizWuntchHoltInsults
   },
   data() {
@@ -88,10 +88,14 @@ export default {
   background-position: center;
   background-attachment: fixed;
 }
+      
 
 .holt-hyphen {
   position: relative;
   padding-left: 50px;
+  @media #{map-get($display-breakpoints, 'sm-and-down')} {
+    padding-left: 20px;
+  }  
 }
 
 .holt-hyphen:before {

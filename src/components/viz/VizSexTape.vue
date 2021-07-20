@@ -10,18 +10,31 @@
         :items="whose"
         @input="colorByWhose($event)" /> 
       sex's tapes?</p>  
+
+    <div v-if="this.$vuetify.breakpoint.smAndDown">   
+      <v-card
+        class="viz-tooltip pa-3 tooltip-container"
+        flat
+      >
+        <img src="tape.png" width="100%" />
+        <div class="centered">{{ tooltip.name }}</div>
+      </v-card>
+    </div>
+
     <!-- Viz Starts here -->
     <div id="chart" class="my-4">
       <svg id="colorsSVG"/>
-      <v-card
-        v-show="tooltip.show"
-        class="viz-tooltip pa-3 tooltip-container"
-        flat
-        :style="{ top: `${tooltip.move.top}px`, left: `${tooltip.move.left}px` }"
-      >
-        <img src="tape.png" width= 100% />
-        <div class="centered">{{ tooltip.name }}</div>
-      </v-card>
+      <div v-if="this.$vuetify.breakpoint.mdAndUp">   
+        <v-card
+          v-show="tooltip.show"
+          class="viz-tooltip pa-3 tooltip-container"
+          flat
+          :style="{ top: `${tooltip.move.top}px`, left: `${tooltip.move.left}px` }"
+        >
+          <img src="tape.png" width= "100%" />
+          <div class="centered">{{ tooltip.name }}</div>
+        </v-card>
+      </div>
     </div>
   </div>
 </v-container>
@@ -35,7 +48,6 @@ export default {
   data() {
     return {
       innerWidth: 700,
-      innerHeight: 250,
       filterlist: [
         {id: 'pronoun [your]', description: 'Title of YOUR sex tap'},
         {id: 'every time Jake said it', description: 'and the times that he did not'},
@@ -64,6 +76,18 @@ export default {
     };
   }, 
   computed: {
+    innerHeight() {
+      if (this.$vuetify.breakpoint.smAndDown) {
+        return 600;
+      }
+      return 250;
+    },
+    gap() {
+      if (this.$vuetify.breakpoint.smAndDown) {
+        return 30;
+      }
+      return 18;
+    },    
     chartMargin() {
       return { top: 20, right: 10, bottom: 30, left: 10 };
     },
@@ -156,8 +180,7 @@ export default {
         .text('📼')
         .attr('class', 'sex-tape')        
         .attr('x', d => this.vizSettings.scale.x(+d.season))
-        .attr('y', (d, i) => this.vizSettings.scale.y(d.startY) - i * 18)
-        // .attr('width', this.innerWidth / 2)
+        .attr('y', (d, i) => this.vizSettings.scale.y(d.startY) - i * 30)
         .attr('transform', `translate(35, 0)`)
         .attr('height',  (d) => this.vizSettings.scale.y(d.startY) - this.vizSettings.scale.y(d.endY));
       
@@ -184,38 +207,7 @@ export default {
           this.tooltip.show = true;
           this.tooltip.name = d.title;
           this.tooltip.hex = d.hex;
-        })
-        .on('mouseenter.design', function showBox() {
-          // highlight the circle
-          d3.select(this).attr('stroke', '#2c3e50').raise();
-          // move the tooltip to the correct position
-          const selectedRect = d3
-            .select(this)
-            .node()
-            .getBoundingClientRect();
-          const tooltip = d3
-            .select('.viz-tooltip')
-            .node()
-            .getBoundingClientRect();
-          const chart = d3
-            .select('#chart')
-            .node()
-            .getBoundingClientRect();
-          
-          const posLeft =
-            selectedRect.left > document.body.clientWidth / 2.25
-              ? selectedRect.left - chart.left - tooltip.width - 5// right
-              : selectedRect.right - chart.left + 5  // left
-
-          const posTop = 
-            selectedRect.top > document.body.clientHeight / 2.5
-              ? selectedRect.bottom - chart.top - tooltip.height // bottom
-              : selectedRect.top - chart.top // top
-          
-          d3.select('.viz-tooltip')
-            .style('top', `${posTop}px`)
-            .style('left', `${posLeft}px`);
-          d3.select(this).style("cursor", "pointer");
+          console.log(this.tooltip);
         })
         .on('mouseleave.design', function hideBox() {
           // remove highlight from the circle
@@ -227,6 +219,42 @@ export default {
           this.tooltip.name = '';
           this.tooltip.hex = ''; 
         });
+
+      if (this.$vuetify.breakpoint.mdAndUp) {
+        this.rect
+          .on('mouseenter.design', function showBox() {
+            // highlight the circle
+            d3.select(this).attr('stroke', '#2c3e50').raise();
+            // move the tooltip to the correct position
+            const selectedRect = d3
+              .select(this)
+              .node()
+              .getBoundingClientRect();
+            const tooltip = d3
+              .select('.viz-tooltip')
+              .node()
+              .getBoundingClientRect();
+            const chart = d3
+              .select('#chart')
+              .node()
+              .getBoundingClientRect();
+            
+            const posLeft =
+              selectedRect.left > document.body.clientWidth / 2.25
+                ? selectedRect.left - chart.left - tooltip.width - 5// right
+                : selectedRect.right - chart.left + 5  // left
+
+            const posTop = 
+              selectedRect.top > document.body.clientHeight / 2.5
+                ? selectedRect.bottom - chart.top - tooltip.height // bottom
+                : selectedRect.top - chart.top // top
+            
+            d3.select('.viz-tooltip')
+              .style('top', `${posTop}px`)
+              .style('left', `${posLeft}px`);
+            d3.select(this).style("cursor", "pointer");
+          })      
+      }
     },
     kebabCase(string) {
       return _kebabCase(string)
@@ -260,7 +288,7 @@ export default {
 .tooltip-container {
   position: relative;
   text-align: center;
-  color: white;
+  color: black;
 }
 
 .centered {
@@ -282,11 +310,15 @@ export default {
 
 .viz-tooltip {
   max-width: 300px;
-  // @media only screen and (max-width: 600px) {
-  //   width: 160px;
-  // }
   position: absolute;
   background-color: #fff534 !important;
+  @media #{map-get($display-breakpoints, 'sm-and-down')} {
+    position: unset;
+    max-width: 250px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+  }  
 }
 
 .sex-tape {
@@ -314,8 +346,11 @@ div .v-input >>> .v-input__slot{
 }
 </style>
 
-<style>
+<style lang="scss">
 text.sex-tape {
   font-size: 1.8rem;
+  @media #{map-get($display-breakpoints, 'sm-and-down')} {
+    font-size: 3rem;
+  }
 }
 </style>

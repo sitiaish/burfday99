@@ -4,8 +4,8 @@
     <Section1TerryLoves />
     <SectionCoolCool />
     <Section2SexTapes />   
-    <Section3WuntchHolt /> 
-    <SectionReferences />
+    <Section3WuntchHolt />
+    <SectionReferences /> 
   </div>
 </template>
 
