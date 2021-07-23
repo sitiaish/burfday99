@@ -20,10 +20,13 @@
     <v-container>
       <v-row align="center" justify="center">
         <v-col cols="2">
-          <img :src="charImage" style="width: 100px; margin: auto; display: block;"/>
+          <img :src="holtImage" style="width: 150px; margin: auto; display: block;"/>
         </v-col>
         <v-col cols="3" v-if="line">
           <h3 style="text-align: center;">"{{ line }}"</h3>
+        </v-col>
+        <v-col cols="2">
+          <img :src="wuntchImage" style="width: 150px; margin: auto; display: block;"/>
         </v-col>
       </v-row>
       <v-row v-if="foundIn">
@@ -66,7 +69,8 @@ export default {
       ],
       line: '',
       selectedConvoId: -1,
-      charImage: '',
+      holtImage: '',
+      wuntchImage: '',
       foundIn: ''
     };
   },   
@@ -141,7 +145,13 @@ export default {
         .on("mouseover", (target, d) => {
           this.selectedConvoId = d.id
           this.line = d.line
-          this.charImage = d.who === 'Holt' ? 'holt_dp.png' : 'wuntch_dp.png'
+          if (d.who != 'Wuntch') {
+            this.holtImage = 'holt_dp.png'
+            this.wuntchImage = `wuntch_dp_${d.type}.png`
+          } else {
+            this.wuntchImage = 'wuntch_dp.png'
+            this.holtImage = `holt_dp_${d.type}.png`
+          }
           this.foundIn = `Found in S${d.season}E${d.episode}...`
           d3.select(target.target)
             .style('cursor', 'pointer')
