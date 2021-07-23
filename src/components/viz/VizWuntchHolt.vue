@@ -1,10 +1,12 @@
 <template>
   <div class="pa-12" style="background: white;">
     <v-container>
-      <p class="text--h2 font-tertiary text-center">
-        A quick look at insults across the seasons
-      </p>
-      <svg id='wuntch-holt'/>
+      <v-row align="center" justify="center">
+        <p class="text--h2 font-tertiary text-center">
+          A quick look at insults across the seasons
+        </p>
+        <svg id='wuntch-holt'/>
+      </v-row>
     </v-container>
     <!-- <v-select 
         style="width: 130px;"
@@ -19,18 +21,18 @@
     </v-container> -->
     <v-container>
       <v-row align="center" justify="center">
-        <v-col cols="2">
-          <img :src="holtImage" style="width: 150px; margin: auto; display: block;"/>
+        <v-col cols="3">
+          <img :src="holtImage" style="width: 100%; margin: auto; display: block;"/>
         </v-col>
-        <v-col cols="3" v-if="line">
+        <v-col cols="6" v-if="line">
           <h3 style="text-align: center;">"{{ line }}"</h3>
         </v-col>
-        <v-col cols="2">
-          <img :src="wuntchImage" style="width: 150px; margin: auto; display: block;"/>
+        <v-col cols="3">
+          <img :src="wuntchImage" style="width: 100%; margin: auto; display: block;"/>
         </v-col>
       </v-row>
-      <v-row v-if="foundIn">
-        <h4 style="background: #fff534;">{{ foundIn }}</h4>
+      <v-row v-if="foundIn" align="center" justify="center">
+        <h3 style="background: #fff534;">{{ foundIn }}</h3>
       </v-row>
       <v-row class="data-row" no-gutters align="center" justify="center" v-for="(data, id) in selectedConvo" :key="id">
         <!-- use a v-for to populate the divs  -->
@@ -90,17 +92,22 @@ export default {
     async loadData() {
       this.data = await d3.csv('/data/wuntch-holt-new.csv')
       this.$nextTick(() => {
-        // this.updateChart()
-        this.updateChartNew()
+        this.updateChart()
+        // this.makeChartVertical()
+        const svg = d3.select('svg#wuntch-holt')
+        svg.call(this.responsivefy)
       })
     },
-    updateChartNew() {
+    updateChart() {
+      console.log('horizontaling')
       const svg = d3.select('svg#wuntch-holt')
-                    .attr('height', 300)
-                    .attr('width', 1200)
+                    // .attr('height', 300)
+                    // .attr('width', 1200)
+      svg.selectAll('g.insult-types')
+        .data([]).exit().remove()
       const data = d3.groups(d3.filter(this.data, d => d.type != '' && (d.who === 'Holt' || d.who === 'Wuntch')), d => d.type, d => d.who)
-      console.log(data)
-      let insultTypes = svg.selectAll('rect.insult-bars')
+      
+      let insultTypes = svg.selectAll('g.insult-types')
         .data(data).enter()
         .append('g')
         .attr('class', 'insult-types')
@@ -112,9 +119,15 @@ export default {
             animal: 3,
             others: 4,
           }
-          return 'translate(600 ' + (insultTypesY[d[0]] * 50 + 25) + ')'
+          return 'translate(600 ' + (insultTypesY[d[0]] * 40 + 15) + ')'
         })
 
+      insultTypes.append('rect')
+        .attr('x', -42)
+        .attr('y', -5)
+        .attr('height', 30)
+        .attr('width', 84)
+        .attr('fill', '#fff534')
       insultTypes.append('text')
         .text(d => d[0])
         .attr('text-anchor', 'middle')
@@ -131,7 +144,7 @@ export default {
         .data(d => d[1]).enter()
         .append('rect')
         .attr('who', d => d.who)
-        .attr('x', (d, i) => d.who === 'Wuntch' ? 28 * (i + 2) - 12 : -28 * (i + 2) - 12)
+        .attr('x', (d, i) => d.who === 'Wuntch' ? 28 * (i + 2) - 14 : -28 * (i + 2) - 14)
         .attr('y', -5)
         .attr('height', 30)
         .attr('width', 28)
@@ -168,41 +181,157 @@ export default {
         .data(d => d[1]).enter()
         .append('text')
         .attr('who', d => d.who)
-        .attr('x', (d, i) => d.who === 'Wuntch' ? 28 * (i + 2) - 12 : -28 * (i + 2) - 12)
+        .attr('x', (d, i) => d.who === 'Wuntch' ? 28 * (i + 2) - 14 : -28 * (i + 2) - 14)
         .attr('y', 20)
         .text('💀')
         .attr('font-size', 28)
         .style('pointer-events', 'none')
     },
-    updateChart() {
-      const svg = d3.select('svg#wuntch-holt2')
-                    .attr('height', 350)
-                    .attr('width', 1200)
+    updateChartVertical() {
+      console.log('verticaling')
+      const svg = d3.select('svg#wuntch-holt')
+                    // .attr('height', 800)
+                    // .attr('width', 210)
+      const data = d3.groups(d3.filter(this.data, d => d.type != '' && (d.who === 'Holt' || d.who === 'Wuntch')), d => d.type, d => d.who)
 
-      const data = d3.groups(d3.filter(this.data, d => d.type === this.insultType || this.insultType === 'all'), d => d.who)
+      svg.selectAll('g.insult-types')
+        .data([]).exit().remove()
+      
+      let insultTypes = svg.selectAll('g.insult-types')
+        .data(data).enter()
+        .append('g')
+        .attr('class', 'insult-types')
+        .attr('transform', d => {
+          const insultTypesY = {
+            fantasy: 0,
+            work: 1,
+            physical: 2,
+            animal: 3,
+            others: 4,
+          }
+          return 'translate(' + (insultTypesY[d[0]] * 40 + 70) + ' 600)'
+        })
 
-      let bars = svg.selectAll('rect.insult-bars')
-        .data(data)
-      bars.exit().remove()
-      bars.enter()
+      insultTypes.append('rect')
+        .attr('x', 0)
+        .attr('y', -42 + 74)
+        .attr('height', 84)
+        .attr('width', 30)
+        .attr('fill', '#fff534')
+      insultTypes.append('text')
+        .text(d => d[0])
+        .attr('transform', 'rotate(270)')
+        .attr('text-anchor', 'middle')
+        .attr('y', 18)
+        .attr('x', -74)
+        // .style('font-family', 'Anton')
+        .style('font-weight', 'bold')
+        .style('font-size', 32)
+        
+      let insultWhos = insultTypes.selectAll('g')
+        .data(d => d[1]).enter()
+        .append('g')
+      
+      insultWhos.selectAll('rect')
+        .data(d => d[1]).enter()
         .append('rect')
-        .attr('class', 'insult-bars')
-        .merge(bars)
-        .attr('x', 10)
-        .attr('y', (d, i) => i * 30)
+        .attr('who', d => d.who)
+        .attr('x', 0)
+        .attr('y', (d, i) => -i * 30)
+        .attr('height', 30)
+        .attr('width', 28)
         .attr('fill', d => {
-          switch(d[0]) {
-            case 'Holt':
-              return 'blue'
-            case 'Wuntch':
-              return 'red'
-            default:
-              return 'grey'
+          switch (d.who) {
+            case 'Holt': return '#1e3799'
+            case 'Wuntch': return '#eb2f06'
+            default: return 'grey'
           }
         })
-        .attr('width', d => d[1].length * 5)
-        .attr('height', 20)
-    }
+        .on("mouseover", (target, d) => {
+          this.selectedConvoId = d.id
+          this.line = d.line
+          if (d.who != 'Wuntch') {
+            this.holtImage = 'holt_dp.png'
+            this.wuntchImage = `wuntch_dp_${d.type}.png`
+          } else {
+            this.wuntchImage = 'wuntch_dp.png'
+            this.holtImage = `holt_dp_${d.type}.png`
+          }
+          this.foundIn = `Found in S${d.season}E${d.episode}...`
+          d3.select(target.target)
+            .style('cursor', 'pointer')
+            .attr('stroke', '#fff534')
+            .attr('fill', '#fff534')
+        })
+        .on('mouseout', target => {
+          d3.select(target.target)
+            .attr('stroke', 'none')
+            .attr('fill', d => d.who === 'Holt'? '#1e3799' : '#eb2f06')
+        })
+
+      insultWhos.selectAll('text')
+        .data(d => d[1]).enter()
+        .append('text')
+        .attr('who', d => d.who)
+        .attr('x', 0)
+        .attr('y', (d, i) => -i * 30 + 26)
+        .text('💀')
+        .attr('font-size', 28)
+        .style('pointer-events', 'none')
+    },
+    responsivefy(svg) {
+      // const width = parseInt(svg.style('width'), 10);
+      // const height = parseInt(svg.style('height'), 10);
+      // const aspect = width / height;
+      let aspect = null
+      // if (width < 600) {
+      //   aspect = 0.45
+      // } else {
+      //   aspect = 2.25
+      // }
+      // const height = Math.round(width / aspect)
+      // console.log(width)
+      // console.log(height)
+
+      // svg.attr('viewBox', `0 0 ${width} ${height}`)
+      //   .attr('preserveAspectRatio', 'xMinYMid')
+      //   .call(this.resize, aspect);
+      this.resize(svg, aspect)
+
+      d3.select(window).on('resize.test', () => {
+        this.resize(svg, aspect);
+      });
+    },
+    resize(svg, aspect) {
+      const container = d3.select(svg.node().parentNode);
+      const w = parseInt(container.style('width'), 10)
+      if (w < 600) {
+        aspect = 0.5
+      } else {
+        aspect = 4
+      }
+      const h = Math.round(w / aspect)
+      console.log(w)
+      console.log(h)
+      // const w = Math.min(parseInt(container.style('width'), 10), 1200);
+      svg.attr('width', w);
+      svg.attr('height', h);
+        
+      
+      // const container = d3.select(svg.node().parentNode);
+      // const w = Math.min(parseInt(container.style('width'), 10), 1200);
+
+      // console.log(w)
+      if (w < 600) {
+        svg.attr('viewBox', `0 0 ${400} ${800}`)
+          .attr('preserveAspectRatio', 'xMinYMid')
+        this.updateChartVertical()
+      } else {
+        svg.attr('viewBox', `0 0 ${1200} ${300}`)
+          .attr('preserveAspectRatio', 'xMinYMid')
+        this.updateChart()
+      }
+    },
   },
 };
 </script>
