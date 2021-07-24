@@ -1,12 +1,13 @@
 <template>
   <section class="section_wrapper">
-    <VizCoolCoolScrollyOverlay/>
+    <VizCoolCoolScrollyOverlay v-if="!$vuetify.breakpoint.mobile" />
+    <VizCoolCoolScrollyMobile v-if="$vuetify.breakpoint.mobile" />
     <VizCoolCoolGraph/>
   </section>
 </template>
 
 <script>
-// import Map from '@/components/viz/Map'
+import VizCoolCoolScrollyMobile from '@/components/viz/VizCoolCoolScrollyMobile'
 import VizCoolCoolScrollyOverlay from '@/components/viz/VizCoolCoolScrollyOverlay'
 import VizCoolCoolGraph from '@/components/viz/VizCoolCoolGraph'
 
@@ -14,6 +15,7 @@ export default {
   name: 'Section',
   mounted() {},
   components: {
+    VizCoolCoolScrollyMobile,    
     VizCoolCoolScrollyOverlay,
     VizCoolCoolGraph,
   },

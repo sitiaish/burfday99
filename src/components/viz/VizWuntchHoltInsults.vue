@@ -54,7 +54,7 @@
       </v-col>
 
       <v-col v-if="step === 1" cols="11" lg="6" class="wuntch-holt-insults-intro hidden-sm-and-down">
-        <iframe class="youtube-iframe my-8" src="https://www.youtube.com/embed/tqf5slEsdh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  {{step}}       
+        <iframe class="youtube-iframe my-8" src="https://www.youtube.com/embed/tqf5slEsdh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
       </v-col>
     </v-row>
 
