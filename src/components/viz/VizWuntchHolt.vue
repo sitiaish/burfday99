@@ -1,6 +1,6 @@
 <template>
-  <div class="pa-12" style="background: white;">
-    <v-container>
+  <div class="py-12 viz-wuntch-holt">
+    <v-container class="py-lg-12">
       <v-row align="center" justify="center">
         <p class="text--h2 font-tertiary text-center">
           A quick look at insults across the seasons
@@ -24,8 +24,8 @@
         <h3 style="background: #fff534;">{{ foundIn }}</h3>
       </v-row>
       <v-row class="data-row" no-gutters align="center" justify="center" v-for="(data, id) in selectedConvo" :key="id">
-        <v-col cols="8">
-          <div class="pa-3">
+        <v-col cols="12" md="8">
+          <div class="pa-3 mt-8">
             <p 
               v-for="(n, i) in data[1]"
               :key="i"
@@ -84,30 +84,29 @@ export default {
     },
     updateChart() {
       this.cleanSlate()
-      const svg = d3.select('svg#wuntch-holt')
-                    // .attr('height', 300)
-                    // .attr('width', 1200)
-      
+      const svg = d3.select('svg#wuntch-holt');
+
       // Add 1 <g> per insult type
       let insultTypes = svg.selectAll('g.insult-types')
         .data(this.groupedData).enter()
         .append('g')
         .attr('class', 'insult-types')
-        .attr('transform', d => `translate(600 ${(this.insultTypes.indexOf(d[0]) * 40 + 15)})`)
+        .attr('transform', d => `translate(620 ${(this.insultTypes.indexOf(d[0]) * 50 + 15)})`)
+
       // Add labels
       insultTypes.append('rect')
-        .attr('x', -42)
+        .attr('x', -45)
         .attr('y', -5)
         .attr('height', 30)
-        .attr('width', 84)
+        .attr('width', 120)
         .attr('fill', '#fff534')
       insultTypes.append('text')
         .text(d => d[0])
         .attr('text-anchor', 'middle')
-        .attr('y', 15)
+        .attr('y', 20)
+        .attr('class', 'insult-label')
         .style('font-family', 'Anton')
         .style('font-weight', 'bold')
-        .style('font-size', 32)
 
       // For each insult type, add 1 <g> per person (Wuntch/Holt)
       let insultWhos = insultTypes.selectAll('g')
@@ -119,10 +118,10 @@ export default {
         .data(d => d[1]).enter()
         .append('rect')
         .attr('who', d => d.who)
-        .attr('x', (d, i) => (d.who === 'Wuntch' ? 1 : -1) * 28 * (i + 2) - 14)
+        .attr('x', (d, i) => (d.who === 'Wuntch' ? 1 : -1) * 28 * (i + 2) - 10)
         .attr('y', -5)
         .attr('height', 30)
-        .attr('width', 28)
+        .attr('width', 35)
         .attr('fill', d => d.who === 'Holt' ? '#1e3799' : '#eb2f06')
         .on("mouseover", this.handleMouseOver)
         .on('mouseout', this.handleMouseOut)
@@ -158,12 +157,12 @@ export default {
       insultTypes.append('text')
         .text(d => d[0])
         .attr('transform', 'rotate(270)')
-        .attr('text-anchor', 'middle')
-        .attr('x', -74)
-        .attr('y', 18)
+        .attr('text-anchor', 'end')
+        .attr('class', 'insult-label')
+        .attr('x', -40)
+        .attr('y', 25)
         .style('font-family', 'Anton')
-        .style('font-weight', 'bold')
-        .style('font-size', 32)
+        .style('font-weight', 'bold');
       
       // For each insult type, add 1 <g> per person (Wuntch/Holt)
       let insultWhos = insultTypes.selectAll('g')
@@ -246,6 +245,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.viz-wuntch-holt {
+  background: #ffffff;
+}
+
 .Wuntch {
   background: repeating-linear-gradient(
     45deg,
@@ -320,5 +323,17 @@ export default {
 
 text {
   cursor: pointer;
+}
+</style>
+
+<style lang="scss">
+text.insult-label {
+  font-size: 24px;
+  @media #{map-get($display-breakpoints, 'xl-only')} {
+    font-size: 32px;
+  }
+  @media #{map-get($display-breakpoints, 'sm-and-down')} {
+    font-size: 30px;
+  }  
 }
 </style>
