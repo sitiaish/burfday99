@@ -13,7 +13,11 @@
         <v-col cols="12" md="6">
           <p class="text--body-2 font-tertiary text-center">
             FREMULON! NOT A DOKTER! SHH. 
-          </p> 
+          </p>
+          <img id="skai" src="skai.png" />
+          <p class="text--body-2 font-tertiary text-center">
+            #skai 
+          </p>
         </v-col>
       </v-row>
     </v-container>    
@@ -97,6 +101,13 @@ export default {
   100% {
     transform: translate3d(var(--move-final-counter), 0, 0);
   }
+}
+
+img#skai {
+  // LOVE YOU LOTS :)
+  display: block;
+  margin: auto;
+  width: 100px;
 }
 
 </style>
