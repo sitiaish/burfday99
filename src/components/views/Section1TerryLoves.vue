@@ -7,7 +7,8 @@
             data-aos="slide-right"
             data-aos-ease = "ease"
             data-aos-duration="1000"
-            data-aos-delay="100">
+            data-aos-delay="100"
+            class="terry-dance">
             <img v-if="count % 2 === 1" src="@/assets/terry-yogurt.png" width="100%" />
             <img v-if="count % 2 === 0" src="@/assets/terry-yogurt-2.png" width="100%" />            
           </div>
@@ -250,6 +251,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+div.terry-dance img {
+  height: 500px;
+}
+
 .section_wrapper {
   background-color: #FFFFFF;
   //height: calc(100vh - 64px);

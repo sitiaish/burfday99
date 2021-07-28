@@ -2,7 +2,8 @@
   <v-container class="cool-scrolly-overlay">
     <v-row justify="space-between" align="start">  
       <v-col cols="12" class="cool-casestudy-scrolly cool-scrolly__sticky" >
-        <svg id='coolcool-viz'></svg>
+        <!-- <svg id='coolcool-viz'></svg> -->
+        <p class="text--header" v-for="(s, i) in coolSegments" :key="i" :class="['cool', `cool-${s}`]" style="display: inline-block;">cool</p>
         <div id='cool-intro' class="text-block" >
           <h3 class="text--h2 mb-16 scroll-prompt text-center">The times they said cool cool</h3>
           <iframe style="margin-left: auto; margin-right: auto; display: block;" width="560" height="315" class="my-8" src="https://www.youtube.com/embed/zDcbpFimUc8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -122,6 +123,8 @@ export default {
   },  
   methods: {
     initViz() {
+      d3.selectAll('p.cool')
+          .style('transform', `translateX(100vw)`)
       d3.select('#coolcool-viz')
         .attr('height', 150)
         .attr('width', window.innerWidth)
@@ -163,13 +166,13 @@ export default {
       if (response.index < 5) {
         p = Math.min(response.progress, 0.6)
         p /= 0.6
-        d3.selectAll('text.cool-' + (response.index + 1))
-          .attr('x', d => 2000 - 2000 * p + d * 120)
+        d3.selectAll('p.cool-' + (response.index + 1))
+          .style('transform', `translateX(${100 - 100 * p}vw)`)
       } else {
         p = Math.min(response.progress, 0.2)
         p /= 0.2
-        d3.selectAll('text.cool-' + (response.index + 1))
-          .attr('x', d => 2000 - 2000 * p + d * 120)
+        d3.selectAll('p.cool-' + (response.index + 1))
+          .style('transform', `translateX(${100 - 100 * p}vw)`)
       }
       if (response.index == 0) {
         d3.select('div#cool-intro')

@@ -103,7 +103,7 @@ export default {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: -45px;
+  left: -2rem;
   color: white;
 }
 </style>

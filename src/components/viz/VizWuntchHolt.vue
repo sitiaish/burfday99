@@ -7,14 +7,17 @@
         </p>
 
         <p class="text--body-1 text-center">
-          Hover over the skulls to see the back and forth between Wuntch and Holt!
+          Hover over the skulls to see the back and forth between Wuntch and Holt!<br/>
           (/editor's note: I think SK had a little bit of fun with the extra doodles) 
         </p>        
-        <svg id='wuntch-holt'/>
+        
       </v-row>
     </v-container>
+    <v-container outer>
+      <svg id='wuntch-holt'/>
+    </v-container>
     <v-container>
-      <v-row align="center" justify="center">
+      <v-row align="start" align-md="center" justify="center">
         <v-col cols="3">
           <img :src="holtImage" style="width: 100%; margin: auto; display: block;"/>
         </v-col>
@@ -96,11 +99,11 @@ export default {
         .data(this.groupedData).enter()
         .append('g')
         .attr('class', 'insult-types')
-        .attr('transform', d => `translate(620 ${(this.insultTypes.indexOf(d[0]) * 50 + 15)})`)
+        .attr('transform', d => `translate(700 ${(this.insultTypes.indexOf(d[0]) * 50 + 15)})`)
 
       // Add labels
       insultTypes.append('rect')
-        .attr('x', -45)
+        .attr('x', -60)
         .attr('y', -5)
         .attr('height', 30)
         .attr('width', 120)
@@ -123,22 +126,32 @@ export default {
         .data(d => d[1]).enter()
         .append('rect')
         .attr('who', d => d.who)
-        .attr('x', (d, i) => (d.who === 'Wuntch' ? 1 : -1) * 28 * (i + 2) - 10)
+        .attr('x', (d, i) => (d.who === 'Wuntch' ? 1 : -1) * 30 * (i + 2.7) - 15)
         .attr('y', -5)
         .attr('height', 30)
-        .attr('width', 35)
+        .attr('width', 30)
         .attr('fill', d => d.who === 'Holt' ? '#1e3799' : '#eb2f06')
         .on("mouseover", this.handleMouseOver)
         .on('mouseout', this.handleMouseOut)
-
-      insultWhos.selectAll('text')
+      insultWhos.selectAll('image')
         .data(d => d[1]).enter()
-        .append('text')
-        .attr('x', (d, i) => (d.who === 'Wuntch' ? 1 : -1) * 28 * (i + 2) - 14)
-        .attr('y', 20)
-        .text('💀')
-        .attr('font-size', 28)
+        .append('image')
+        .attr('who', d => d.who)
+        .attr('x', (d, i) => (d.who === 'Wuntch' ? 1 : -1) * 30 * (i + 2.7) - 15)
+        .attr('y', -5)
+        .attr('height', 30)
+        .attr('width', 30)
+        .attr('href', d => d.who === 'Holt' ? '/holt_tiny.png' : '/wuntch_tiny.png')
         .style('pointer-events', 'none') // Pass through pointer, so we just use underlying rect's mouseover
+
+      // insultWhos.selectAll('text')
+      //   .data(d => d[1]).enter()
+      //   .append('text')
+      //   .attr('x', (d, i) => (d.who === 'Wuntch' ? 1 : -1) * 28 * (i + 2) - 14)
+      //   .attr('y', 20)
+      //   .text('💀')
+      //   .attr('font-size', 28)
+      //   .style('pointer-events', 'none') // Pass through pointer, so we just use underlying rect's mouseover
     },
     updateChartVertical() {
       this.cleanSlate()
@@ -174,7 +187,7 @@ export default {
         .data(d => d[1]).enter()
         .append('g')
       
-      insultWhos.selectAll('rect')
+      insultWhos.selectAll('image')
         .data(d => d[1]).enter()
         .append('rect')
         .attr('who', d => d.who)
