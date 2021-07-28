@@ -2,9 +2,14 @@
   <div class="py-12 viz-wuntch-holt">
     <v-container class="py-lg-12">
       <v-row align="center" justify="center">
-        <p class="text--h2 font-tertiary text-center">
+        <p class="text--h2 font-tertiary text-center mb-4">
           A quick look at insults across the seasons
         </p>
+
+        <p class="text--body-1 text-center">
+          Hover over the skulls to see the back and forth between Wuntch and Holt!
+          (/editor's note: I think SK a little bit of fun with the extra doodles) 
+        </p>        
         <svg id='wuntch-holt'/>
       </v-row>
     </v-container>

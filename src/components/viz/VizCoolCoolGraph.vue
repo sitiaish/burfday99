@@ -1,7 +1,10 @@
 <template>
   <section class="section_wrapper py-12">
           <div class="text-block" style="text-align: center; background: #fff534;">
-            <h2>And a quick look at all the cools in every season!</h2>
+            <h2 class="mb-4">And a quick look at all the cools in every season!</h2>
+            <p class="text--body-1">
+              Hover over the bars to see the count and episode.
+            </p>              
           <svg id="cool-chart" preserveAspectRatio="xMinYMid"/>
           <h3 style='height: 25px;'>{{ caption }}</h3>
           </div>
