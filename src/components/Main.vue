@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="px-2 px-md-0">
     <SectionLanding />
     <Section1TerryLoves />
     <SectionCoolCool />

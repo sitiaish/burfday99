@@ -203,7 +203,7 @@ export default {
       // instantiate scrollama
       const scrollerDesktop1 = scrollama();
 
-      const stepH = Math.floor(window.innerHeight * 0.8);
+      const stepH = Math.floor(window.innerHeight * 0.9);
       d3.selectAll('.step').style("height", stepH + "px");
 
       // setup scrollama
@@ -279,6 +279,9 @@ img.cool-img {
   display: flex;
   justify-content: center;
   align-items: center;    
+  @media #{map-get($display-breakpoints, 'sm-and-down')} {
+    margin: 0 auto 2.5rem auto;
+  }         
 }
 
 .scrolly__sticky {
