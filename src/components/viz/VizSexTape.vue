@@ -65,7 +65,7 @@ export default {
       },
       tooltip: {
         show: false,
-        name: '',
+        name: 'I\'m horrible at this',
         hex: '',
         move: {
           top: 0,
@@ -216,7 +216,7 @@ export default {
         .on('mouseleave.data', () => {
           // reset tooltip settings
           this.tooltip.show = false;
-          this.tooltip.name = '';
+          //this.tooltip.name = '';
           this.tooltip.hex = ''; 
         });
 

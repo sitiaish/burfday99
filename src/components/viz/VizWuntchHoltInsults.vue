@@ -169,20 +169,6 @@ export default {
     this.initScrollama();    
   },  
   methods: {
-    initViz() {
-      d3.select('#coolcool-viz')
-        .attr('height', 150)
-        .attr('width', window.innerWidth)
-        .selectAll('text')
-        .data(d3.range(15)).enter()
-        .append('text')
-        .text('cool')
-        .attr('class', d => 'cool cool-' + this.coolSegments[d])
-        .attr('font-family', 'Anton')
-        .attr('font-size', '64px')
-        .attr('y', 100)
-        .attr('x', 2000)
-    },
     initScrollama() {
       // instantiate scrollama
       const scrollerDesktop1 = scrollama();
@@ -256,6 +242,7 @@ img.cool-img {
   position: relative;
   padding: 0 1rem;
   width: 100%;
+  z-index: 1;
 }
 
 .step {

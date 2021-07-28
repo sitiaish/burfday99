@@ -13,9 +13,11 @@
         
       </v-row>
     </v-container>
+
     <v-container outer>
       <svg id='wuntch-holt'/>
     </v-container>
+    
     <v-container>
       <v-row align="start" align-md="center" justify="center">
         <v-col cols="3">
@@ -238,10 +240,11 @@ export default {
     },
     resize(svg) {
       const container = d3.select(svg.node().parentNode);
-      const w = parseInt(container.style('width'), 10)
+      let w = parseInt(container.style('width'), 10)
       let aspect = null
       if (w < 600) {
-        aspect = 0.5
+        w -= 50
+        aspect = 3/8
       } else {
         aspect = 4
       }
@@ -249,7 +252,7 @@ export default {
       svg.attr('width', w);
       svg.attr('height', h);
       if (w < 600) {
-        svg.attr('viewBox', `0 0 ${400} ${800}`)
+        svg.attr('viewBox', `0 0 ${300} ${800}`)
           .attr('preserveAspectRatio', 'xMinYMid')
         this.updateChartVertical()
       } else {
@@ -342,22 +345,22 @@ export default {
 text {
   cursor: pointer;
 }
+
+.text--h4 {
+  @media #{map-get($display-breakpoints, 'sm-and-down')} {
+    font-size: 18px !important;
+  }
+} 
 </style>
 
-<style lang="scss" scoped>
+<style lang="scss">
 text.insult-label {
-  font-size: 24px;
+  font-size: 32px;
   @media #{map-get($display-breakpoints, 'xl-only')} {
-    font-size: 32px;
+    font-size: 38px;
   }
   @media #{map-get($display-breakpoints, 'sm-and-down')} {
     font-size: 30px;
   }  
 }
-
-.text--h4 {
-  @media #{map-get($display-breakpoints, 'sm-and-down')} {
-    font-size: 18px !important;
-  }  
-}  
 </style>

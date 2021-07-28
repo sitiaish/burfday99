@@ -72,7 +72,7 @@
       </div>
 
       <div class="step" data-step="1">
-        <img src="02x03_side_edit.png" width="110%" />
+        <img src="02x03_side_edit.png" width="100%" />
       </div>
 
 
@@ -87,7 +87,7 @@
       </div>      
 
       <div class="step" data-step="2">
-        <img src="03x08_side_edit.png" width="110%"/>
+        <img src="03x08_side_edit.png" width="100%"/>
       </div>
 
       <div class="step" data-step="2">
