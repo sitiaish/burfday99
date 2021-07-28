@@ -1,13 +1,15 @@
 <template>
   <section class="section_wrapper py-12">
-          <div class="text-block" style="text-align: center; background: #fff534;">
-            <h2 class="mb-4">And a quick look at all the cools in every season!</h2>
-            <p class="text--body-1">
-              Hover over the bars to see the count and episode.
-            </p>              
-          <svg id="cool-chart" preserveAspectRatio="xMinYMid"/>
-          <h3 style='height: 25px;'>{{ caption }}</h3>
-          </div>
+    <div class="text-block" style="text-align: center; background: #fff534;">
+      <h2 class="mb-4">And a quick look at all the cools in every season!</h2>
+      <p class="text--body-1">
+        Hover over the bars to see the count and episode.
+      </p>
+      <div>              
+        <svg id="cool-chart"/>
+      </div>
+    <h3 style='height: 25px;'>{{ caption }}</h3>
+    </div>
   </section>
 </template>
 
@@ -39,11 +41,13 @@ export default {
         'black'
       ],
       caption: '',
-      colWidth: 7
+      colWidth: 8,
+      width: 1200,
     };
   },
   mounted() {
     this.loadData()
+    this.width = this.$el.clientWidth;
   },
   methods: {
     async loadData() {
@@ -53,6 +57,7 @@ export default {
       })
     },
     drawChart() {
+      d3.select('svg#cool-chart').attr('transform', 'translate(50, 0)')
       let grads = d3.select('svg#cool-chart')
         .append('defs')
         .selectAll('linearGradient')
@@ -75,7 +80,7 @@ export default {
         .attr('stop-color', d => this.colors[d])
       
       this.bars = d3.select('svg#cool-chart')
-        .attr('width', 1200)
+        .attr('width', this.width)
         .attr('height', 500)
         .selectAll('rect.cool-bar')
         .data(this.data).enter()

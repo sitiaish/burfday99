@@ -314,6 +314,8 @@ img.cool-img {
 
 .youtube-iframe {
   width: 535px;
+  display: block;
+  margin: 0 auto;  
   height: 315px;
   @media #{map-get($display-breakpoints, 'sm-and-down')} {
     width: 100%;

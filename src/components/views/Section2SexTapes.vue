@@ -9,8 +9,6 @@
             <em>Title of your sex tape</em>. As Boyle said it, "Oh, that's just something we say back at the Nine-Nine." Another running gag is the highly inappropriate titling of people's sex tapes, moslty done by Jake to Amy throughout the seasons. 
           </p>
 
-          img comic 
-
           <iframe class="my-8 youtube-iframe" src="https://www.youtube.com/embed/idQR0oARcIY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>         
         </v-col>
       </v-row>
@@ -183,6 +181,8 @@ div .v-input >>> .v-input__slot{
 }
 
 .youtube-iframe {
+  display: block;
+  margin: 0 auto;
   width: 560px;
   height: 315px;
   @media #{map-get($display-breakpoints, 'sm-and-down')} {

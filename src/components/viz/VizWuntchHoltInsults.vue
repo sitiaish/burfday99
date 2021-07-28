@@ -299,6 +299,8 @@ img.cool-img {
 .youtube-iframe {
   width: 535px;
   height: 315px;
+  display: block;
+  margin: 0 auto;  
   @media #{map-get($display-breakpoints, 'sm-and-down')} {
     width: 100%;
   }      
