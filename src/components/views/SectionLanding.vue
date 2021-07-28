@@ -19,7 +19,7 @@
       <v-row justify="center" align="end" class="fill-height">  
         <v-col cols="12" md="10">
           <p class="text--body-1">
-            ...so we made this together. Hi I'm Aishah, and I am guilty of rewatching Brooklyn 99 episodes during my lunch breaks. This dataviz project is a birthday collab project with greentfrapp. 
+            ...so we made this together. Hi I'm Aishah, and I am guilty of rewatching Brooklyn 99 episodes during my lunch breaks. This dataviz project is a birthday collab project with Sweekiat-but-call-me-SK (<a href="https://github.com/greentfrapp" target="_blank">greentfrapp</a>). 
           </p>
 
           <p class="text--body-1">
