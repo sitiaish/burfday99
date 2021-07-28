@@ -6,7 +6,9 @@
   </div>
   <div id="cool-chart-container" class="my-4 text-center">
     <svg id="cool-chart"/>
-    <h3 style='height: 125px; text-align: top;'>{{ caption }}</h3>
+    <h3 style='height: 125px; text-align: top;'>{{ caption }}<br/>
+      <span class="text--caption hidden-md-and-up">(Hey fat fingers it looks better on desktop)</span>
+    </h3>
   </div>
 </v-container>
   

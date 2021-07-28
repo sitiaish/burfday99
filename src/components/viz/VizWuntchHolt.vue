@@ -145,15 +145,6 @@ export default {
         .attr('width', 30)
         .attr('href', d => d.who === 'Holt' ? '/holt_dp.png' : '/wuntch_dp.png')
         .style('pointer-events', 'none') // Pass through pointer, so we just use underlying rect's mouseover
-
-      // insultWhos.selectAll('text')
-      //   .data(d => d[1]).enter()
-      //   .append('text')
-      //   .attr('x', (d, i) => (d.who === 'Wuntch' ? 1 : -1) * 28 * (i + 2) - 14)
-      //   .attr('y', 20)
-      //   .text('💀')
-      //   .attr('font-size', 28)
-      //   .style('pointer-events', 'none') // Pass through pointer, so we just use underlying rect's mouseover
     },
     updateChartVertical() {
       this.cleanSlate()
@@ -189,26 +180,27 @@ export default {
         .data(d => d[1]).enter()
         .append('g')
       
-      insultWhos.selectAll('image')
+      insultWhos.selectAll('rect')
         .data(d => d[1]).enter()
         .append('rect')
         .attr('who', d => d.who)
         .attr('x', 0)
         .attr('y', (d, i) => -i * 30)
         .attr('height', 30)
-        .attr('width', 28)
+        .attr('width', 30)
         .attr('fill', d => d.who === 'Holt'? '#1e3799' : '#eb2f06')
         .on("mouseover", this.handleMouseOver)
         .on('mouseout', this.handleMouseOut)
 
-      insultWhos.selectAll('text')
+      insultWhos.selectAll('image')
         .data(d => d[1]).enter()
-        .append('text')
+        .append('image')
         .attr('who', d => d.who)
         .attr('x', 0)
-        .attr('y', (d, i) => -i * 30 + 26)
-        .text('💀')
-        .attr('font-size', 28)
+        .attr('y', (d, i) => -i * 30)
+        .attr('height', 30)
+        .attr('width', 30)
+        .attr('href', d => d.who === 'Holt' ? '/holt_dp.png' : '/wuntch_dp.png')
         .style('pointer-events', 'none') // Pass through pointer, so we just use underlying rect's mouseover
     },
     handleMouseOver(target, d) {
@@ -357,7 +349,7 @@ text {
 text.insult-label {
   font-size: 32px;
   @media #{map-get($display-breakpoints, 'xl-only')} {
-    font-size: 38px;
+    font-size: 34px;
   }
   @media #{map-get($display-breakpoints, 'sm-and-down')} {
     font-size: 30px;
