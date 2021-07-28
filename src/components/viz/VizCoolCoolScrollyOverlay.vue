@@ -7,7 +7,7 @@
         <div id='cool-intro' class="text-block" >
           <h3 class="text--h2 mb-16 scroll-prompt text-center">The times they said cool cool</h3>
           <iframe style="margin-left: auto; margin-right: auto; display: block;" width="560" height="315" class="my-8" src="https://www.youtube.com/embed/zDcbpFimUc8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <p class="text--body-3">
+          <p class="text--body-2">
             Is it a real compliment? A coping mechanism? Something to fill the silence? Whatever it is, the cool-chain has become part of what we love about the Nine-Nine. No doubt, no doubt.
           </p>
         </div>
@@ -18,7 +18,7 @@
           <img src="02x03_side_edit.png" width="50%" style="margin-left: -10%;" />
           <div class="text-block">
             <p class="text--body-1 font-weight-bold">2 Cools: S02E03 - The Jimmy Jab Games</p>
-            <p class="text--body-3">
+            <p class="text--body-2">
               Well, well, well. Turns out the first ever "Cool, cool." was said by Boyle during his attempt to retrieve the tape in the department video camera from Hitchcock. This was more of a slow serious "cool, cool" meant to mask Boyle's frantic attempt to conceal evidence of Boyle and Gina's sexcapade.
             </p>
             <img class="cool-img" src="02x03_coolcool.png" />
@@ -29,7 +29,7 @@
           <img src="03x08_side_edit.png" width="50%" style="margin-left: -10%;" />
           <div class="text-block">
             <p class="text--body-1 font-weight-bold">3 Cools: S03E08 - Ava</p>
-            <p class="text--body-3">
+            <p class="text--body-2">
               Jake rattles off three "cool"s in sweet succession as he calmly handles Sharon's childbirth and proceeds to summon her vaginal Gandalf aka doula, which is a thing that he definitely know what it is.
             </p>
             <img class="cool-img" src="03x08_coolcoolcool.png" />             
@@ -40,7 +40,7 @@
           <img src="05x20_side_edit.png" width="50%" />
           <div class="text-block">
             <p class="text--body-1 font-weight-bold">3 Cools (worried ver.): S05E20 - Show Me Going</p>
-            <p class="text--body-3">
+            <p class="text--body-2">
               In response to the name of Det. Brett Booth, Jake nonchalently utters, "Cool, cool, cool." But best-bud-Boyle notices that (UH-OH!) that was Jake's worried "cool, cool, cool."
             </p>
             <img class="cool-img" src="05x20_coolcoolcool.png" />
@@ -51,7 +51,7 @@
           <img src="02x10_side_edit.png" width="40%" style="margin-right: -30%;" />
           <div class="text-block">
             <p class="text--body-1 font-weight-bold">7 Cools: S02E10 - The Pontiac Bandit Returns</p>
-            <p class="text--body-3">
+            <p class="text--body-2">
               Some might call this the first official cool-cool-cool, as Jake goes undercover with Rosa and a string of seven "cool"s camouflages his nervousness in the presence of Tito Ruiz.
             </p>
             <img class="cool-img" src="02x10_coolcool.png" />
@@ -63,10 +63,10 @@
           <div class="text-block">
             <p class="text--body-1 font-weight-bold">10 Cools: S06E12 - Casecation</p>
             <p class="text--body-2"><em>"I don't know that I totally know that I for sure want to have kids, so..."</em></p>
-            <p class="text--body-3">
+            <p class="text--body-2">
               Oh lord, we sank right into the deep end of the cool-pool here! What follows is an intense debate over this major life decision between Amy (taking the affirmative) and Jake (taking the negative), judged by none other than Captain Raymond Holt (debate moderator license D810Y41JJ6).
             </p>
-            <p class="text--body-3">
+            <p class="text--body-2">
               Still, they did end up making the world's hottest baby by the end of season 7 (S07E13 - Lights Out) - aka McClane "Mac" Peralta-Santiago.
             </p>
             <img class="cool-img" src="07x13_baby.png" />
@@ -77,23 +77,23 @@
           <img src="02x11_jake_edit.png" height="100%" style="margin-top: -10%; margin-right: -15%;" />
           <div class="text-block" style="margin-bottom: 300px;">
             <p class="text--body-1 font-weight-bold">Many Many Cools</p>
-            <p class="text--body-3">
+            <p class="text--body-2">
               Yeah well we're definitely not counting these, but uncountable cool-chains include:
             </p>
             <p class="text--body-1 font-weight-bold">S02E11 - Stakeout</p>
-            <p class="text--body-3">
+            <p class="text--body-2">
               Peralta and Boyle both fire off some cool-chains over their no-no lists.
             </p>
             <p class="text--body-1 font-weight-bold">S03E12 - 9 Days</p>
-            <p class="text--body-3">
+            <p class="text--body-2">
               Captain Holt and Peralta finding extreme testicular discomfort very very cool.
             </p>
             <p class="text--body-1 font-weight-bold">S04E22 - Crime &amp; Punishment</p>
-            <p class="text--body-3">
+            <p class="text--body-2">
               Season 4 ends with lots of "cool"s as Jake gets sentenced to jailtime!
             </p>
             <p class="text--body-1 font-weight-bold">S06E10 - Gintars</p>
-            <p class="text--body-3">
+            <p class="text--body-2">
               Boyle machine-guns "cool"s and faints upon meet Nikolaj's birth father.
             </p>
           </div>

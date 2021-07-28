@@ -22,7 +22,7 @@
           <img :src="holtImage" style="width: 100%; margin: auto; display: block;"/>
         </v-col>
         <v-col cols="6" v-if="line">
-          <h3 style="text-align: center;">"{{ line }}"</h3>
+          <h3 class="text--h4" style="text-align: center;">"{{ line }}"</h3>
         </v-col>
         <v-col cols="3">
           <img :src="wuntchImage" style="width: 100%; margin: auto; display: block;"/>
@@ -141,7 +141,7 @@ export default {
         .attr('y', -5)
         .attr('height', 30)
         .attr('width', 30)
-        .attr('href', d => d.who === 'Holt' ? '/holt_tiny.png' : '/wuntch_tiny.png')
+        .attr('href', d => d.who === 'Holt' ? '/holt_dp.png' : '/wuntch_dp.png')
         .style('pointer-events', 'none') // Pass through pointer, so we just use underlying rect's mouseover
 
       // insultWhos.selectAll('text')
@@ -344,7 +344,7 @@ text {
 }
 </style>
 
-<style lang="scss">
+<style lang="scss" scoped>
 text.insult-label {
   font-size: 24px;
   @media #{map-get($display-breakpoints, 'xl-only')} {
@@ -354,4 +354,10 @@ text.insult-label {
     font-size: 30px;
   }  
 }
+
+.text--h4 {
+  @media #{map-get($display-breakpoints, 'sm-and-down')} {
+    font-size: 18px !important;
+  }  
+}  
 </style>

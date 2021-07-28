@@ -357,10 +357,12 @@ div.terry-dance img {
 .sample-card {
   position: relative;
   height: 80%;
+  max-height: 600px;
   width: 500px;
   @media #{map-get($display-breakpoints, 'sm-and-down')} {
     width: 300px;
-    height: 70%;    
+    height: 80%;
+    max-height: none;
   }  
   background-color: yellow;
   margin-right: 75px;
