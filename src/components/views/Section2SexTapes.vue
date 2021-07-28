@@ -15,27 +15,7 @@
     </v-container>
 
     <VizSexTape />
-<!-- 
-    <div class="marquee">
-      <ul class="marquee-content">
-        <li class="marquee-item"><img class="marquee-image" src="https://picsum.photos/200/300?random=1" alt="animal1"></li>
-        <li class="marquee-item"><img class="marquee-image" src="https://picsum.photos/200/300?random=2" alt="animal2"></li>
-        <li class="marquee-item"><img class="marquee-image" src="https://picsum.photos/200/300?random=3" alt="animal3"></li>
-        <li class="marquee-item"><img class="marquee-image" src="https://picsum.photos/200/300?random=4" alt="animal4"></li>
-        <li class="marquee-item"><img class="marquee-image" src="https://picsum.photos/200/300?random=5" alt="animal5"></li>
 
-        <li class="marquee-item"><img class="marquee-image" src="https://picsum.photos/200/300?random=6" alt="animal1"></li>
-        <li class="marquee-item"><img class="marquee-image" src="https://picsum.photos/200/300?random=7" alt="animal2"></li>
-        <li class="marquee-item"><img class="marquee-image" src="https://picsum.photos/200/300?random=8" alt="animal3"></li>
-        <li class="marquee-item"><img class="marquee-image" src="https://picsum.photos/200/300?random=10" alt="animal4"></li>
-
-        <li class="marquee-item"><img class="marquee-image" src="https://picsum.photos/200/300?random=6" alt="animal1"></li>
-        <li class="marquee-item"><img class="marquee-image" src="https://picsum.photos/200/300?random=7" alt="animal2"></li>
-        <li class="marquee-item"><img class="marquee-image" src="https://picsum.photos/200/300?random=8" alt="animal3"></li>
-        <li class="marquee-item"><img class="marquee-image" src="https://picsum.photos/200/300?random=10" alt="animal4"></li>   
-             
-      </ul>
-    </div>     -->
   </section>
 </template>
 
@@ -43,7 +23,7 @@
 import VizSexTape from '@/components/viz/VizSexTape'
 
 export default {
-  name: 'Section1TerryLoves',
+  name: 'Section2SexTapes',
   components: {
     VizSexTape,
   },

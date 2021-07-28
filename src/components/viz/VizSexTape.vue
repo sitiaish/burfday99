@@ -172,7 +172,7 @@ export default {
         .append('g')
         .attr('class', d => d.key);
       this.rect = group
-        .selectAll('rect.sex-tape')
+        .selectAll('text.sex-tape')
         .data(d => d.value)
         .enter()
         // .append('rect')
