@@ -203,7 +203,7 @@ export default {
     },    
     handleTooltip() {
       this.rect
-        .on('mouseenter.data', (event, d) => {
+        .on('mouseover.data', (event, d) => {
           this.tooltip.show = true;
           this.tooltip.name = d.title;
           this.tooltip.hex = d.hex;
@@ -222,7 +222,7 @@ export default {
 
       if (this.$vuetify.breakpoint.mdAndUp) {
         this.rect
-          .on('mouseenter.design', function showBox() {
+          .on('mouseover.design', function showBox() {
             // highlight the circle
             d3.select(this).attr('stroke', '#2c3e50').raise();
             // move the tooltip to the correct position
