@@ -7,8 +7,8 @@
         </p>
 
         <p class="text--body-1 text-center">
-          Hover over the skulls to see the back and forth between Wuntch and Holt!<br/>
-          (/editor's note: I think SK had a little bit of fun with the extra doodles) 
+          Hover over the faces to see the back and forths between Wuntch and Holt!<!-- <br/>
+          (/editor's note: I think SK had a little bit of fun with the extra doodles)  -->
         </p>        
         
       </v-row>

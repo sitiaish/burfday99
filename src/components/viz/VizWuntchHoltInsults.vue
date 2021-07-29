@@ -69,7 +69,7 @@
               </p>
 
               <p class="text--body-2">
-                Holt gets points in my book for the creative references to fantasy characters like the wicked Witch (from Oz), the Cheuksin and the thing that gets summoned when you "say Bloody Mary three times". The most common of these are references to the devil. 
+                Holt gets points in our book for the creative references to fantasy characters like the wicked Witch (from Oz), the Cheuksin and Bloody Mary. The most common of these are references to the devil. 
               </p>
 
               <p class="text--body-2">
@@ -87,7 +87,7 @@
               </p>
 
               <p class="text--body-2">
-                Wuntch definitely wins in this one. Not only does she <em>verbally</em> roasts Holt's career, she made Holt wear Paulie the Pigeon mascot when she "promoted" to a desk job as the head of NYPD Public Relations (S02E22 - The Chopper). Later in the season, she'd even demoted Holt for a year when she became acting commissioner in S06E18 - Suicide Squad. 
+                Wuntch definitely wins this one. Not only does she <em>verbally</em> roast Holt's career, she made Holt wear Paulie the Pigeon mascot when she "promoted" him to a desk job as the head of NYPD Public Relations (S02E22 - The Chopper). Later in the season, she even demoted Holt for a year when she became acting commissioner in S06E18 - Suicide Squad. 
               </p>
             </div>
           </div>
@@ -101,7 +101,7 @@
               </p>
 
               <p class="text--body-2">
-                I'd say they are both pretty tied for these ones. The most common taunt on physical traits would have to do with each other's age. With that, comes wrinkly skin "like a raisin" and dying of old age.              
+                We'd say they are both pretty tied for these ones. The most common taunt on physical traits would be about each other's age. With that, comes wrinkly skin "like a raisin" and dying of old age.              
               </p>
             </div>
           </div>
@@ -129,7 +129,7 @@
               <!-- <img src="03x08_side_edit.png" width="50%" /> -->
 
               <p class="text--h2 font-tertiary text-center">
-                just go with it
+                All the others
               </p>
 
               <p class="text--body-2">

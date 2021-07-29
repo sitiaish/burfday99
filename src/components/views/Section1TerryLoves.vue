@@ -35,7 +35,7 @@
 
           <div class="pt-12">
             <p class="text--body-1">            
-              The running gag with Terry is that he refers to himself in the third person -- "You made Terry get real with himself and his genitals. [S0202 - Chocolate Milk]". And that he loves yogurt. I wanted to see what else Terry loves besides yogurt. We went ahead to find instances in B99 with "Terry love". We expanded this to include "Terry like". 
+              The running gag with Terry is that he refers to himself in the third person -- "You made Terry get real with himself and his genitals. [S02E02 - Chocolate Milk]". And that he loves yogurt. We wanted to see what else Terry loves besides yogurt. We went ahead to find instances in B99 with "Terry loves". We expanded this to include "Terry likes". 
             </p>
 
             <p class="text--body-1">            
@@ -56,7 +56,7 @@
 
         <v-col cols="12" md="6">
           <div class="terry-card text-left">
-            <p class="text--body-2">Click on the emoji to see what Terry had loved/hated on B99!</p>          
+            <p class="text--body-2">Click on the emoji to see what Terry loved/hated on B99!</p>          
               <div class="details pa-4">
                 <h3 class="text--h2 text--header mb-12">{{ ['loves', 'likes', 'loved'].some(d => selectedItem.emotion === d) ?  '❤️' : '💔' }} {{ selectedItem.thing }}</h3>
                 <p class="mb-3 text--body-1">
@@ -81,11 +81,11 @@
         <v-col cols="12" md="12">
           <div class="pt-12">
             <p class="text--body-1">            
-              Of course, searching by string like we did couldn't possibly cover all the things Terry loves and hate. I caught that when <em>"Terry loves yogurt"</em> strings only came up three times across the B99 files. And we know, <em>for a fact</em> that Terry loves his yogurt. So what gives? 
+              Of course, searching the way we did couldn't possibly cover all the things Terry loves and hates. We caught that when <em>"Terry loves yogurt"</em> only came up three times across the 7 seasons. And we know, <em>for a fact</em> that Terry loves his yogurt. So what gives? 
             </p>
 
             <p class="text--body-1">            
-              I guess it's more of how important yogurt is to Terrence that makes us remmember Terry loves yogurt and maybe less so of the number of times the line is spoken. Like even Captain Holt knows Terry loves his yogurt when the gag first started in S01E02 - The Tagger. 
+              Perhaps it is not so much the number of times the "Terry loves yogurt" is spoken. Instead, we get hints of Terry's love in other ways. Like even Captain Holt knows Terry loves his yogurt when the gag first started in S01E02 - The Tagger. 
             </p>
           </div>
         </v-col>        
@@ -103,7 +103,7 @@
                   S01E02 - The Tagger
                 </p>
                 <p class="text--body-2">
-                  First mention of "Terry loves yogurt" when a police report was fished from Terry's trash with stains of yogurt.
+                  The first hint that "Terry loves yogurt" occurs when a police report was fished from Terry's trash with yogurt stains.
                 </p>
               </div>            
             </div>
@@ -125,7 +125,7 @@
                   S02E13 - Payback
                 </p>
                 <p class="text--body-2">
-                  The team tries to hack into Terry's email, only to be stumped by password. Surprise, surprise -- the password, as guessed by Boyle, is "yogurt".
+                  The team tries to hack into Terry's email to delete Jake's accidental email (Hurricane Jeffords is a great name!). Surprise, surprise -- the password, as guessed by Boyle, is "yogurt".
                 </p>
               </div>                             
             </div>
@@ -135,7 +135,7 @@
                   S03E02 - The Funeral
                 </p>
                 <p class="text--body-2">
-                  Did you hear? Terry's favourite mango yogurt got discontinued! I love how he ranks this together with Sharon's bedrest and his kids thinking their preschool teacher a "stupidface". Yep they all stink Terry.
+                  Did you hear? Terry's favourite mango yogurt got discontinued! We love how he thinks this is as bad as Sharon's bed rest and his kids thinking their preschool teacher is a "stupid face". Yep they all stink Terry.
                 </p>
               </div>                    
               <img src="@/assets/mango-yogurt.png" width="100%" />             
@@ -356,7 +356,7 @@ div.terry-dance img {
 
 .sample-card {
   position: relative;
-  height: 80%;
+  height: 85%;
   max-height: 600px;
   width: 500px;
   @media #{map-get($display-breakpoints, 'sm-and-down')} {
