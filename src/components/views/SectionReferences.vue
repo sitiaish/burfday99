@@ -4,11 +4,11 @@
       <v-row justify="center" align="end" class="fill-height">  
         <v-col cols="12" md="10">
           <p class="text--body-1">
-            I wish we had more time make more viz based on other Brooklyn 99 running gags. Like how manny times Cheddahhh 🐶appears appears throughout the show or something related to the Halloween heists🎃 -- who is the Ultimate Detective/Genius?
+            That's all we have for now! But if inspiration strikes we may update this with more interactive visualizations on other Brooklyn 99 running gags! Like how many times Cheddahhh 🐶 appears throughout the show or something related to the Halloween heists 🎃 -- who is the Ultimate Detective/Genius?
           </p>
 
           <p class="text--body-1">
-            We had fun working on this in anticipation of the season finale and hey, it was a great excuse to rewatch all the episodes in detail again for this project! Maybe we'll do another one once the season ends.
+            We had a lot of fun working on this in anticipation of the Season 8 (boo it's ending 😭) and it was the perfect excuse to rewatch all the episodes again! Maybe we'll do another one once the season ends.
           </p>  
 
           <p class="text--body-1 text-center">
