@@ -1,14 +1,24 @@
 <template>
   <section class="section_wrapper py-12">    
-    <v-container class="container--inner">
+    <v-container inner>
       <v-row justify="center" align="end" class="fill-height">  
-        <v-col cols="12" md="8" class="text-center">
-          <p id='title'><em>BROOKLYN<br/>NINE-NINE</em></p> 
+        <v-col cols="12" md="10">
+          <p class="text--body-1">
+            I wish we had more time make more viz based on other Brooklyn 99 running gags. Like how manny times Cheddahhh 🐶appears appears throughout the show or something related to the Halloween heists🎃 -- who is the Ultimate Detective/Genius?
+          </p>
+
+          <p class="text--body-1">
+            We had fun working on this in anticipation of the season finale and hey, it was a great excuse to rewatch all the episodes in detail again for this project! Maybe we'll do another one once the season ends.
+          </p>  
+
+          <p class="text--body-1 text-center">
+            Until then!
+          </p>                    
         </v-col>
       </v-row>
-    </v-container>
+    </v-container>     
 
-    <v-container inner>
+    <v-container inner pt-12>
       <v-row justify="center" align="end">  
         <v-col cols="12" md="6">
           <p class="text--body-2 font-tertiary text-center">
