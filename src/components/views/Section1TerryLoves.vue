@@ -254,8 +254,10 @@ export default {
 div.terry-dance img {
   height: 500px;
   @media #{map-get($display-breakpoints, 'sm-and-down')} {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 350px;
+    margin: 0 auto;
+    display: block;
   } 
 }
 
@@ -380,7 +382,7 @@ div.terry-dance img {
 .iterate-wrapper {
   height: 150px;
   @media #{map-get($display-breakpoints, 'sm-and-down')} {
-    height: 180px;
+    height: 200px;
   }  
 }
 </style>
