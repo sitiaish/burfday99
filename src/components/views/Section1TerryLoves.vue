@@ -9,8 +9,8 @@
             data-aos-duration="1000"
             data-aos-delay="100"
             class="terry-dance">
-            <img v-if="count % 2 === 1" src="@/assets/terry-yogurt.png" width="100%" />
-            <img v-if="count % 2 === 0" src="@/assets/terry-yogurt-2.png" width="100%" />            
+            <img v-if="count % 2 === 1" src="@/assets/terry-yogurt.png" />
+            <img v-if="count % 2 === 0" src="@/assets/terry-yogurt-2.png" />            
           </div>
         </v-col>
         <v-col cols="12" md="8">
@@ -253,6 +253,10 @@ export default {
 <style lang="scss" scoped>
 div.terry-dance img {
   height: 500px;
+  @media #{map-get($display-breakpoints, 'sm-and-down')} {
+    width: 100%;
+    height: auto;
+  } 
 }
 
 .section_wrapper {
