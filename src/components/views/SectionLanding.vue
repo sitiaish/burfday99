@@ -24,7 +24,11 @@
 
           <p class="text--body-1">
             SK scrapped B99 dialog from <a href="https://transcripts.foreverdreaming.org/viewforum.php?f=429">here</a>. And we tried to do something per character based on the dialog data that we have. Also the lines were not tagged to the character that spoke it, so we were limited that way. Pretty cool cool cool cool birthday gift!  
-          </p> 
+          </p>
+          <br/>
+          <p class="text--body-1" style="border: 1px solid white; padding: 5px; text-align: center;">
+            <b>SPOILER ALERT!</b> The visualizations are going to cover plotlines across the first seven seasons, so be warned!
+          </p>
         </v-col>
       </v-row>
     </v-container>        
